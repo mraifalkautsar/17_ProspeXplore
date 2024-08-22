@@ -32,9 +32,14 @@ body {
   }
 }
 
+p{
+  font: poppins;
+}
+
 .header{
   width: 100%;
-  padding: 20px 100px;
+  height: 96px;
+  padding: 17px 61px;
   background: #03254c;
   display: flex;
   justify-content: space-between;
@@ -43,21 +48,20 @@ body {
 }
 
 .logo{
-  font-size: 32px;
-  color: white;
-  font-weight: 700;
-  position: relative;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 58px;
+  width: 123px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .navbar a{
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   color: white;
   margin-left: 40px;
   display: inline-block; 
   transition: transform 0.3s ease;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font: poppins;
 }
 
 .navbar a:hover{
@@ -66,65 +70,239 @@ body {
 
 .tagline-container{
   width: 100%;
-  padding: 100px 100px;
+  padding: 25px 100px;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 510px;
   background-color: white;
   color: black;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font: poppins;
 }
 
 .tagline-head{
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-  padding-bottom: 5vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+
+.logo-tagline{
+  height: 232px;
+  width: 491px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .tagline{
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 48px;
+  font-weight: 700;
   text-align: center;
   color: rgb(87, 82, 82);
 }
 
-.kesan-container{
+.menu-container, .pekerjaan-container, .perusahaan-container, .prodi-container, .kontak{
   width: 100%;
-  display: flex;
-  height: 75vh;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 610px;
+  color: #242B46;
+  font: poppins;
 }
 
-.foto-alumni{
-  width: 40%;
-  background-color: rgb(87, 82, 82);
+.pekerjaan-container{
+  background-color: #bbd1c4;
 }
 
-.kesan-pesan{
-  width: 60%;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  padding-left: 8vh;
-  padding-right: 10vh;
-  background-color: rgb(198, 194, 194);
+.perusahaan-container{
+  background-color: #f4f6c7;
 }
 
-.kesan-alumni{
-  font-size: 48px;
+.prodi-container{
+  background-color: white;
+}
+
+.menu-container{
+  background-color: #50a095;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-title{
+  font-size: 64px;
   font-weight: 700;
-  padding-bottom: 3vh;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 85px;
 }
 
-.nama-alumni{
+.menu-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button{
+  height: 218px;
+  width: 218px;
+}
+
+.pekerjaan-button, .perusahaan-button, .kontak-button, .prodi-button{
+  margin-left: 65px;
+  margin-right: 65px;
+  height: 275px;
+  width: 218px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pekerjaan-text, .perusahaan-text, .kontak-text, .prodi-text{
   font-size: 24px;
-  font-weight: 500;
-  padding-bottom: 2vh;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  color: white;
 }
 
-.posisi-alumni{
-  font-size: 18px;
+.pekerjaan-title, .perusahaan-title, .prodi-title{
+  padding-left: 42px;
+  padding-top: 30px;
+  font-size: 64px;
+  font-weight: 700;
+  text-align: justify;
+}
+
+.pekerjaan-link, .perusahaan-link, .prodi-link{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 42px;
+  font-size: 24px;
+  font-weight: 400;
+  font: poppins;
+}
+
+.kontak{
+  height: 650px;
+  background-color: #143562;
+  display: flex;
+}
+
+.kontak-informasi{
+  width: 50%;
+  padding-top: 175px;
+  padding-left: 75px;
+}
+
+.hubungi-kami{
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.jangan-ragu{
+  font-size: 20px;
   font-weight: 500;
-  padding-bottom: 2vh;
+  color: white;
+  padding-bottom: 10px;
+  width: 415px;
+}
+
+.nomor-kontak{
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.kontak-komplain{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 52px;
+}
+
+.komplain-container{
+  width: 598px;
+  height: 553px;
+  border-radius: 36px;
+  padding-left: 52px;
+  padding-right: 52px;
+  padding-top: 160px;
+  padding-bottom: 30px;
+  background-color: white;
+}
+
+.email, .no-telp{
+  background-color: #e5e8ed;
+  width: 484px;
+  height: 51px;
+  border-radius: 14px;
+  display: flex;
+  padding: 5px;
+  border-width: 1.5px;
+  border-color: black;
+  margin-top: 10px;
+}
+
+.komplain-logo{
+  margin: 5px 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.komplain-text{
+  background-color: #e5e8ed;
+  width: 484px;
+  height: 155px;
+  border-radius: 14px;
+  display: flex;
+  padding: 15px;
+  margin-top: 10px;
+  border-width: 1.5px;
+  border-color: black;
+}
+
+.email input, .no-telp input{
+  border: none;
+  background-color: #e5e8ed;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0px 5px;
+  font: poppins;
+}
+
+.komplain-text textarea{
+  border: none;
+  background-color: #e5e8ed;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0px 5px;
+  font: poppins;
+  resize: none;
+}
+
+.komplain-button{
+  margin-top: 10px;
+  width: 484px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.komplain-button button{
+  background-color: #50a095;
+  width: 177px;
+  height: 36px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font: poppins;
 }

@@ -8,7 +8,7 @@ export default function Home() {
       <div className="flex items-center justify-center h-screen">
         <div className="text-2xl text-white font-bold relative font-sans">PROSPEXPLORE</div>
       </div>
-      
+      // test
     </main>
     // #d0efff
   );

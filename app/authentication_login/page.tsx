@@ -8,7 +8,7 @@ export default function Home() {
           <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>
         </div>
 
-        <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">DAFTAR</h2>
+        <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">MASUK AKUN</h2>
 
         <form className="mt-6 space-y-4">
           <div className="mb-4">
@@ -30,11 +30,11 @@ export default function Home() {
         </form>
 
         <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
-          DAFTAR
+          MASUK AKUN
         </button>
 
         <p className="my-4 text-center text-gray-950">
-          Sudah punya akun? <Link href="/authentication_login" className="font-medium text-blue-600 hover:text-blue-500">Masuk Akun</Link>
+          Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
         </p>
       </div>
       

@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <main>
       <header className="header">
-        <Image className="logo" src="/Logo.png" alt="ProspeXplore" width={100} height={50} />
+        <Image className="logo" src="/Logo.png" alt="ProspeXplore" width={123} height={58} />
         <nav className="navbar">
           <Link href="#profile">Profile</Link>
           <Link href="#Referral">Log In</Link>
@@ -45,7 +45,7 @@ export default function Home() {
       </header>
       <div className="tagline-container">
         <div className="tagline-head">
-          <Image className="logo-tagline" src="/Logo.png" alt="ProspeXplore" width={100} height={50} />
+          <Image className="logo-tagline" src="/Logo.png" alt="ProspeXplore" width={491} height={232} />
         </div>
         <div className="tagline">
           <p>Discover Your Future, Trace Your Success</p>
@@ -59,7 +59,9 @@ export default function Home() {
           <div className="pekerjaan-button">
             <div className="pekerjaan-pic">
               <button className="menu-button">
-                <Image src="/working.png" alt="working-logo" width={50} height={50} />
+                <Link href="#pekerjaan">
+                  <Image className="menu-button-img" src="/working.png" alt="working-logo" width={218} height={218} /> 
+                </Link>
               </button>
             </div>
             <div className="pekerjaan-text">
@@ -69,7 +71,7 @@ export default function Home() {
           <div className="perusahaan-button">
             <div className="perusahaan-pic">
               <button className="menu-button">
-                <Image src="/office.png" alt="office-logo" width={50} height={50} />
+                <Link href="#perusahaan"><Image className="menu-button-img" src="/office.png" alt="office-logo" width={218} height={218} /></Link>
               </button>
             </div>
             <div className="perusahaan-text">
@@ -79,7 +81,7 @@ export default function Home() {
           <div className="prodi-button">
             <div className="prodi-pic">
               <button className="menu-button">
-                <Image src="/school.png" alt="school-logo" width={50} height={50} />
+                <Link href="#prodi"><Image className="menu-button-img" src="/school.png" alt="school-logo" width={218} height={218} /></Link>
               </button>
             </div>
             <div className="prodi-text">
@@ -89,7 +91,7 @@ export default function Home() {
           <div className="kontak-button">
             <div className="kontak-pic">
               <button className="menu-button">
-                <Image src="/robot-assistant.png" alt="contact-logo" width={50} height={50} />
+                <Link href="#kontak"><Image className="menu-button-img" src="/robot-assistant.png" alt="contact-logo" width={218} height={218} /></Link>
               </button>
             </div>
             <div className="kontak-text">
@@ -98,32 +100,32 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pekerjaan-container">
+      <div id="pekerjaan" className="pekerjaan-container">
         <div className="pekerjaan-title">
           <p>PEKERJAAN</p>
         </div>
         <div className="pekerjaan-link">
-          <Link href="#">Lihat Semua</Link>
+          <Link className="lihat-semua" href="#">Lihat Semua</Link>
         </div>
       </div>
-      <div className="perusahaan-container">
+      <div id="perusahaan" className="perusahaan-container">
         <div className="perusahaan-title">
           <p>PERUSAHAAN</p>
         </div>
         <div className="perusahaan-link">
-          <Link href="#">Lihat Semua</Link>
+          <Link className="lihat-semua" href="#">Lihat Semua</Link>
         </div>
       </div>
-      <div className="prodi-container">
+      <div id="prodi" className="prodi-container">
         <div className="prodi-title">
           <p>PRODI</p>
         </div>
         <div className="prodi-link">
-          <Link href="#">Lihat Semua</Link>
+          <Link className="lihat-semua" href="#">Lihat Semua</Link>
         </div>
       </div>
       <form className="kontak" onSubmit={handleSubmit}>
-        <div className="kontak-informasi">
+        <div id="kontak" className="kontak-informasi">
           <p className="hubungi-kami">Hubungi Kami</p>
           <p className="jangan-ragu">
             Jangan ragu untuk menghubungi kami untuk informasi dan berita terbaru!
@@ -165,6 +167,21 @@ export default function Home() {
           </div>
         </div>
       </form>
+      <footer className="footer">
+        <div className="footer-logo">
+          <Image className="logo" src="/Logo.png" alt="ProspeXplore" width={100} height={50} />
+        </div>
+        <div className="footer-contact">
+          <p className="footer-contact-text" >Informasi Kontak</p>
+          <p className="footer-contact-text">aowkoakoawko</p>
+        </div>
+        <div className="footer-media">
+          <p className="footer-media-text">Sosial Media</p>
+          <div className="footer-media-icon">
+            <Image src="/soc-med.png" alt="socmed-logo" width={149} height={58} />
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

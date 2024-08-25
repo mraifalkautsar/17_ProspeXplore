@@ -28,15 +28,15 @@ export default function Home() {
               className="block w-full px-3 py-2 border-2 rounded-md"
             ></input>
           </div>
+          <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
+            DAFTAR
+          </button>
+
+          <p className="my-4 text-center text-gray-950">
+            Sudah punya akun? <Link href="/authentication_login" className="font-medium text-blue-600 hover:text-blue-500">Masuk Akun</Link>
+          </p>
         </form>
 
-        <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
-          DAFTAR
-        </button>
-
-        <p className="my-4 text-center text-gray-950">
-          Sudah punya akun? <Link href="/authentication_login" className="font-medium text-blue-600 hover:text-blue-500">Masuk Akun</Link>
-        </p>
       </div>
       
     </main>

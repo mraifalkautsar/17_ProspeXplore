@@ -16,7 +16,7 @@ const faculties = [
   { src: "/FITB.png", alt: "FITB" },
 ];
 
-const FacultyButton = ({ src, alt }) => (
+const FacultyButton = ({ src, alt } : { src:any, alt:any }) => (
   <div className="flex flex-col items-center mb-10">
     <Link href={`/faculties/${alt}`}>
     <button className="w-24 h-24 lg:w-28 lg:h-28 bg-gray-100 rounded-full flex justify-center items-center hover:bg-black hover:border-4 hover:border-[#055096] hover:scale-110 transition-transform duration-300 ease-in-out p-1 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]">

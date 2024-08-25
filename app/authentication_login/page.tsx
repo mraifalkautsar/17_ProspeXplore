@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Dashboard from "@/components/Dashboard";
 
 export default function Home() {
   return (
@@ -11,9 +10,8 @@ export default function Home() {
 
         <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">MASUK AKUN</h2>
 
-
         <form className="mt-6 space-y-4">
-          <div className="mb-4 text-gray-950">
+          <div className="mb-4">
             <input
               name="email"
               type="email"
@@ -21,7 +19,7 @@ export default function Home() {
               className="block w-full px-3 py-2 border-2 rounded-md"
             ></input>
           </div>
-          <div className="mb-4 text-gray-950">
+          <div className="mb-4">
             <input
               name="password"
               type="password"
@@ -29,15 +27,16 @@ export default function Home() {
               className="block w-full px-3 py-2 border-2 rounded-md"
             ></input>
           </div>
+          
+          <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
+            MASUK AKUN
+          </button>
+
+          <p className="my-4 text-center text-gray-950">
+            Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
+          </p>
         </form>
 
-        <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
-          MASUK AKUN
-        </button>
-
-        <p className="my-4 text-center text-gray-950">
-          Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
-        </p>
       </div>
       
     </main>

@@ -6,7 +6,7 @@ export default function Home() {
     <main className="bg-[#03254c] min-h-screen flex items-center justify-center">
       <div className="relative w-full max-w-md px-8 pt-0.5 pb-8 space-y-6 bg-gray-200 shadow-lg rounded-lg">
         <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
-          <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>
+          <h1 className="text-3xl text-white font-bold font-sans">PROSPEXPLORE</h1>
         </div>
 
         <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">DAFTAR</h2>

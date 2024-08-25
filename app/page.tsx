@@ -174,6 +174,7 @@ export default function Home() {
         <div className="footer-contact">
           <p className="footer-contact-text" >Informasi Kontak</p>
           <p className="footer-contact-text">aowkoakoawko</p>
+          <p className="footer-contact-text">Untuk lihat respons form kontak: <a href="/form-response"> Link </a></p>
         </div>
         <div className="footer-media">
           <p className="footer-media-text">Sosial Media</p>

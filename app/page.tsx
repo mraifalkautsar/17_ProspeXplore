@@ -25,12 +25,12 @@ export default function Home() {
     });
 
     if (response.ok) {
-      alert("Your message has been sent!");
+      alert("Pesan Anda berhasil terkirim! Silakan tunggu respons kami.");
       setEmail("");
       setPhone("");
       setMessage("");
     } else {
-      alert("There was an error sending your message.");
+      alert("Yah, ada masalah ketika mengirimkan pesan.");
     }
   };
 

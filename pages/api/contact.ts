@@ -1,6 +1,6 @@
+// pages/api/contact.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
+import clientPromise from "../../lib/mongodb"; // Adjust the path based on your project structure
 
 type ContactData = {
   email: string;
@@ -8,39 +8,24 @@ type ContactData = {
   message: string;
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { email, phone, message }: ContactData = req.body;
 
-    // Create the directory path if it doesn't exist
-    const directoryPath = path.join(process.cwd(), "data");
-    if (!fs.existsSync(directoryPath)) {
-      fs.mkdirSync(directoryPath);
-    }
-
-    // Create or append to the JSON file
-    const filePath = path.join(directoryPath, "contacts.json");
-    const newContact = { email, phone, message };
-
     try {
-      let data: ContactData[] = [];
+      // Get a MongoDB client and connect to the database
+      const client = await clientPromise;
+      const db = client.db("form_response"); // Replace with your database name
+      const collection = db.collection("contacts"); // Replace with your collection name
 
-      // Check if the file exists and read the existing data
-      if (fs.existsSync(filePath)) {
-        const fileContent = fs.readFileSync(filePath, "utf-8");
-        data = JSON.parse(fileContent);
-      }
-
-      // Append the new contact data
-      data.push(newContact);
-
-      // Write the updated data back to the file
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      // Insert the new contact data
+      const newContact = { email, phone, message };
+      await collection.insertOne(newContact);
 
       // Send a success response
       res.status(200).json({ message: "Data saved successfully!" });
     } catch (error) {
-      console.error("Error writing file", error);
+      console.error("Error saving data to MongoDB", error);
       res.status(500).json({ error: "Failed to save data" });
     }
   } else {

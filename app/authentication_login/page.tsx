@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Dashboard from "@/components/Dashboard";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
 
         <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">MASUK AKUN</h2>
 
+
         <form className="mt-6 space-y-4">
-          <div className="mb-4">
+          <div className="mb-4 text-gray-950">
             <input
               name="email"
               type="email"
@@ -19,7 +21,7 @@ export default function Home() {
               className="block w-full px-3 py-2 border-2 rounded-md"
             ></input>
           </div>
-          <div className="mb-4">
+          <div className="mb-4 text-gray-950">
             <input
               name="password"
               type="password"

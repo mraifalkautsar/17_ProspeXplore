@@ -1,5 +1,7 @@
+import Dashboard from "@/components/Dashboard";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function Home() {
   return (
@@ -11,6 +13,9 @@ export default function Home() {
           <a href="#Referral">Log In</a>
         </nav>
       </header>
+      
+      <Dashboard/>
+
       <body>
         <Link href="/authentication">Auth</Link>
       </body>

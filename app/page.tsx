@@ -36,127 +36,96 @@ export default function Home() {
 
   return (
     <main>
-      <header className="header">
-        <Image className="logo" src="/Logo.png" alt="ProspeXplore" width={123} height={58} />
-        <nav className="navbar">
-          <Link href="#profile">Profile</Link>
-          <Link href="#Referral">Log In</Link>
-        </nav>
-      </header>
-      <div className="tagline-container">
-        <div className="tagline-head">
-          <Image className="logo-tagline" src="/Logo.png" alt="ProspeXplore" width={491} height={232} />
-        </div>
-        <div className="tagline">
-          <p>Discover Your Future, Trace Your Success</p>
-        </div>
-      </div>
-      <div className="menu-container">
-        <div className="menu-title">
-          <p>EKSPLORASI MENU</p>
-        </div>
-        <div className="menu-content">
-          <div className="pekerjaan-button">
-            <div className="pekerjaan-pic">
-              <button className="menu-button">
-                <Link href="#pekerjaan">
-                  <Image className="menu-button-img" src="/working.png" alt="working-logo" width={218} height={218} /> 
-                </Link>
-              </button>
-            </div>
-            <div className="pekerjaan-text">
-              <p>Pekerjaan</p>
-            </div>
-          </div>
-          <div className="perusahaan-button">
-            <div className="perusahaan-pic">
-              <button className="menu-button">
-                <Link href="#perusahaan"><Image className="menu-button-img" src="/office.png" alt="office-logo" width={218} height={218} /></Link>
-              </button>
-            </div>
-            <div className="perusahaan-text">
-              <p>Perusahaan</p>
-            </div>
-          </div>
-          <div className="prodi-button">
-            <div className="prodi-pic">
-              <button className="menu-button">
-                <Link href="#prodi"><Image className="menu-button-img" src="/school.png" alt="school-logo" width={218} height={218} /></Link>
-              </button>
-            </div>
-            <div className="prodi-text">
-              <p>Prodi</p>
-            </div>
-          </div>
-          <div className="kontak-button">
-            <div className="kontak-pic">
-              <button className="menu-button">
-                <Link href="#kontak"><Image className="menu-button-img" src="/robot-assistant.png" alt="contact-logo" width={218} height={218} /></Link>
-              </button>
-            </div>
-            <div className="kontak-text">
-              <p>Kontak</p>
+      <div className="landing-page-top">
+        <div className="header-container">
+          <div className="header">
+            <Image className="logo" src="/logo.png" alt="ProspeXplore" width={190} height={53} />
+            <div className="navbar">
+              <Link href="#">Fakultas</Link>
+              <Link href="#">Tes Minat</Link>
+              <button className="sign-in-button">Sign In</button>
             </div>
           </div>
         </div>
+        
+        <div className="tagline-container">
+          <div className="tagline-text">
+            <div>
+              <p className="welcome-text ">Welcome to,</p>
+            </div>
+            <div>
+              <p className="app-name">ProspeXplore</p>
+            </div>
+            <div>
+              <p className="app-description">
+                Welcome to Prospexplore, your gateway to meaningful career insights through our comprehensive tracer study platform. Discover the paths of our graduates and explore endless possibilities for your own professional journey!</p>
+            </div>
+            <div>
+              <button className="explore-button">Explore Here</button>
+            </div>
+          </div>
+          <div className="tagline-pic">
+            <Image src="/mascot.png" alt="mascot" width={493} height={635}/>
+          </div>
+        </div>
       </div>
-      <div id="pekerjaan" className="pekerjaan-container">
-        <div className="pekerjaan-title">
-          <p>PEKERJAAN</p>
-        </div>
-        <div className="pekerjaan-link">
-          <Link className="lihat-semua" href="#">Lihat Semua</Link>
-        </div>
+      <div className="fakultas">
+
       </div>
-      <div id="perusahaan" className="perusahaan-container">
-        <div className="perusahaan-title">
-          <p>PERUSAHAAN</p>
+      <div className="tes-minat">
+        <div className="tes-minat-judul">
+          <p className="text-white mr-3">Test your</p>
+          <p className="text-violet-500">Minat</p>
         </div>
-        <div className="perusahaan-link">
-          <Link className="lihat-semua" href="#">Lihat Semua</Link>
+        <div className="tes-minat-desc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. </p>
         </div>
-      </div>
-      <div id="prodi" className="prodi-container">
-        <div className="prodi-title">
-          <p>PRODI</p>
+        <div className="tes-minat-fakta">
+          <div className="tes-minat-fakta-desc">
+            <div className="tes-minat-fakta-desc-judul">
+              <p>What Model do We Use?</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. </p>
+            <div className="tes-minat-fakta-desc-desc"></div>
+          </div>
+          <div className="tes-minat-fakta-data">
+            <Image className="tes-minat-fakta-data-pic" src="/target-full.png" alt="accuracy rate" width={590} height={298}/>
+          </div>
         </div>
-        <div className="prodi-link">
-          <Link className="lihat-semua" href="#">Lihat Semua</Link>
-        </div>
+        <div className="tes-minat-button-container"><button className="tes-minat-button">Test Here!</button></div>
       </div>
       <form className="kontak" onSubmit={handleSubmit}>
-        <div id="kontak" className="kontak-informasi">
-          <p className="hubungi-kami">Hubungi Kami</p>
-          <p className="jangan-ragu">
-            Jangan ragu untuk menghubungi kami untuk informasi dan berita terbaru!
-          </p>
-          <p className="nomor-kontak">email & telp</p>
+        <div className="kontak-pic">
+          <Image src="/contact-man.png" alt="contact" width={730} height={768}/>
         </div>
         <div className="kontak-komplain">
+          <div className="kontak-komplain-judul">
+            <p>Let's Stay In Touch!</p>
+          </div>
           <div className="komplain-container">
             <div className="email">
-              <Image className="komplain-logo" src="/email.png" alt="email-logo" width={20} height={20} />
+              <Image className="komplain-logo-email" src="/email1.png" alt="email-logo" width={20} height={16} />
               <input
                 className="email-input"
                 type="text"
-                placeholder="Email"
+                placeholder="example@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="no-telp">
-              <Image className="komplain-logo" src="/phone.png" alt="phone-logo" width={20} height={20} />
+              <Image className="komplain-logo" src="/phone1.png" alt="phone-logo" width={20} height={20} />
               <input
                 className="no-telp-input"
                 type="text"
-                placeholder="No.Telepon"
+                placeholder="+62XXX-XXXX-XXXX"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
             <div className="komplain-text">
               <textarea
-                placeholder="Bagaimana kami dapat membantu?"
+                placeholder="Type your message here..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
@@ -167,22 +136,17 @@ export default function Home() {
           </div>
         </div>
       </form>
-      <footer className="footer">
+      <div className="footer">
         <div className="footer-logo">
-          <Image className="logo" src="/Logo.png" alt="ProspeXplore" width={100} height={50} />
-        </div>
-        <div className="footer-contact">
-          <p className="footer-contact-text" >Informasi Kontak</p>
-          <p className="footer-contact-text">aowkoakoawko</p>
-          <p className="footer-contact-text">Untuk lihat respons form kontak: <a href="/form-response"> Link </a></p>
+          <Image className="mr-3" src="/logo-half1.png" alt="half-1" width={45} height={40}/>
+          <Image src="/logo-half2.png" alt="half-2" width={185} height={37}/>
         </div>
         <div className="footer-media">
-          <p className="footer-media-text">Sosial Media</p>
           <div className="footer-media-icon">
-            <Image src="/soc-med.png" alt="socmed-logo" width={149} height={58} />
+            <Image src="/social.png" alt="socmed-logo" width={121} height={26} />
           </div>
         </div>
-      </footer>
+      </div>
     </main>
   );
 }

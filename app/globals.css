@@ -41,254 +41,328 @@ p{
   font-family: 'Poppins', sans-serif;
 }
 
-.header{
-  width: 100%;
-  height: 96px;
-  padding: 17px 61px;
-  background: #03254c;
+.landing-page-top {
+  background: 
+    linear-gradient(112.46deg, rgba(26, 53, 148, 0.8) 20.57%, rgba(107, 88, 179, 0.8) 99.71%),
+    url('/backgroundstrings.png') no-repeat center center;
+  background-size: cover;
+  height: 982px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0px;
+}
+
+.header { 
+  width: 1400px; 
+  height: 70px;
+  padding: 10px 30px;
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  border-radius: 30px;
 }
 
 .logo{
-  height: 58px;
-  width: 123px;
   object-fit: cover;
-  border-radius: 10px;
+
 }
 
 .navbar a{
-  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
   font-weight: 500;
-  color: white;
-  margin-left: 40px;
-  display: inline-block; 
-  transition: transform 0.3s ease;
-  font: poppins;
+  color: #1A3594;
+  margin-left: 40px; 
+  text-decoration: none;
+  transition: font-weight 0.3s ease;
+}
+.navbar a:hover{
+  font-weight: 700;
+  transition: 0.3s ease;
 }
 
-.navbar a:hover{
-  transform: scale(1.2);
+.navbar a::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: #1A3594;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before{
+  width: 100%;
+}
+
+.sign-in-button{
+  background-color: #1A3594;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-left: 40px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sign-in-button:hover {
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .tagline-container{
-  width: 100%;
   padding: 25px 100px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 510px;
+}
+
+.tagline-text{
+  width: 800px;
+  padding: 40px 50px;
+}
+
+.tagline-pic{
+  width: 700px;
+  padding: 25px 50px;
+}
+
+.welcome-text{
+  font-size: 30px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  height: 60px;
+}
+
+.app-name{
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  height: 139px;
+}
+
+.app-description{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  height: 120px;
+}
+
+.explore-button{
   background-color: white;
   color: black;
-}
-
-.tagline-head{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  padding-bottom: 2vh;
-}
-
-.logo-tagline{
-  height: 232px;
-  width: 491px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
-
-.tagline{
-  font-size: 48px;
+  font-size: 18px;
   font-weight: 700;
-  text-align: center;
-  color: rgb(87, 82, 82);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 188px;
+  margin-top: 50px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.menu-container, .pekerjaan-container, .perusahaan-container, .prodi-container, .kontak{
-  width: 100%;
-  height: 610px;
-  color: #242B46;
-  font: poppins;
+.explore-button:hover {
+  box-shadow: 8px 3px 10px rgba(0, 0, 0, 2);
 }
 
-.pekerjaan-container{
-  background-color: #bbd1c4;
-}
-
-.perusahaan-container{
-  background-color: #f4f6c7;
-}
-
-.prodi-container{
+.fakultas{
+  height: 982px;
   background-color: white;
 }
 
-.menu-container{
-  background-color: #50a095;
-  justify-content: center;
-  align-items: center;
+.tes-minat{
+  background: 
+    linear-gradient(112.46deg, rgba(26, 53, 148, 0.8) 20.57%, rgba(107, 88, 179, 0.8) 99.71%),
+    url('/backgroundstrings.png') no-repeat center center;
+  background-size: cover;
+  height: 982px;
 }
 
-.menu-title{
-  font-size: 64px;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 85px;
-}
-
-.menu-content{
+.tes-minat-judul{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 70px;
+  font-weight: 700;
+  padding-top: 100px;
 }
 
-.menu-button{
-  height: 218px;
-  width: 218px;
+.tes-minat-desc{
+  width: 1174px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100px;
+  margin: 0px 168px;
+  margin-top: 50px;
 }
 
-.menu-button:hover{
-  transform: scale(1.1);
-  z-index: 2;
-  transition: transform 0.3s ease;
-}
-
-.menu-button-img:hover{
-  transform: scale(1.1);
-  z-index: 2;
-  transition: transform 0.3s ease;
-}
-
-.pekerjaan-button, .perusahaan-button, .kontak-button, .prodi-button{
-  margin-left: 65px;
-  margin-right: 65px;
-  height: 275px;
-  width: 218px;
+.tes-minat-fakta{
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 176px;
 }
 
-.pekerjaan-text, .perusahaan-text, .kontak-text, .prodi-text{
-  font-size: 24px;
-  font-weight: 400;
-  text-align: center;
-  padding-top: 20px;
+.tes-minat-fakta-desc{
+  width: 560px;
+  height: 236px;
+  padding-top: 50px;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.tes-minat-fakta-desc-judul{
+  font-size: 30px;
+  font-weight: 700;
   color: white;
+  padding-bottom: 10px;
 }
 
-.pekerjaan-title, .perusahaan-title, .prodi-title{
-  padding-left: 42px;
-  padding-top: 30px;
-  font-size: 64px;
-  font-weight: 700;
-  text-align: justify;
-}
-
-.pekerjaan-link, .perusahaan-link, .prodi-link{
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding-right: 42px;
-  font-size: 24px;
+.tes-minat-fakta-desc-desc{
+  font-size: 16px;
   font-weight: 400;
-  font: poppins;
+  color: white;
+  padding-bottom: 10px;
 }
 
-.pekerjaan-link :hover, .perusahaan-link :hover, .prodi-link :hover{
-  transform: scale(1.1);
-  z-index: 2;
-  transition: transform 0.3s ease;
+.tes-minat-fakta-pic{
+  width: 590px;
+  height: 298px;
+}
+
+.tes-minat-button-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.tes-minat-button{
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 188px;
+  margin-top: 50px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tes-minat-button:hover {
+  box-shadow: 8px 3px 10px rgba(0, 0, 0, 2);
 }
 
 .kontak{
-  height: 650px;
-  background-color: #143562;
+  height: 860px;
+  background-color: white;
   display: flex;
 }
 
-.kontak-informasi{
+.kontak-pic{
   width: 50%;
-  padding-top: 175px;
   padding-left: 75px;
-}
-
-.hubungi-kami{
-  font-size: 36px;
-  font-weight: 700;
-  color: white;
-  padding-bottom: 10px;
-}
-
-.jangan-ragu{
-  font-size: 20px;
-  font-weight: 500;
-  color: white;
-  padding-bottom: 10px;
-  width: 415px;
-}
-
-.nomor-kontak{
-  font-size: 20px;
-  font-weight: 500;
-  color: white;
-  padding-bottom: 10px;
+  box-sizing: border-box;
+  padding-top: 100px;
 }
 
 .kontak-komplain{
   width: 50%;
   justify-content: center;
   align-items: center;
-  padding-top: 52px;
+}
+
+.kontak-komplain-judul{
+  font-size: 65px;
+  font-weight: 700;
+  color: #1A3594;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-shadow: 4px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .komplain-container{
-  width: 598px;
-  height: 553px;
+  width: 673px;
+  height: 565px;
   border-radius: 36px;
   padding-left: 52px;
   padding-right: 52px;
-  padding-top: 160px;
+  padding-top: 15px;
   padding-bottom: 30px;
-  background-color: white;
+  background-color: #1A3594;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+input::placeholder{
+  color: #1A3594;
+}
+
+textarea::placeholder{
+  color: #1A3594;
+  font-style: italic;
 }
 
 .email, .no-telp{
-  background-color: #e5e8ed;
-  width: 484px;
-  height: 51px;
-  border-radius: 14px;
+  background-color: white;
+  width: 570px;
+  height: 60px;
+  border-radius: 20px;
   display: flex;
   padding: 5px;
   border-width: 1.5px;
   border-color: black;
-  margin-top: 10px;
+  margin-top: 25px;
+  color:#1A3594;
 }
 
 .komplain-logo{
-  margin: 5px 10px;
-  height: 25px;
-  width: 25px;
+  margin: 15px 15px;
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+.komplain-logo-email{
+  margin: 15px 15px;
+  height: 16px;
+  width: 20px;
+  object-fit: cover;
 }
 
 .komplain-text{
-  background-color: #e5e8ed;
-  width: 484px;
-  height: 155px;
-  border-radius: 14px;
+  background-color: white;
+  width: 570px;
+  height: 213px;
+  border-radius: 20px;
   display: flex;
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 80px;
   border-width: 1.5px;
   border-color: black;
+  color: #1A3594;
 }
 
 .email input, .no-telp input{
   border: none;
-  background-color: #e5e8ed;
+  background-color: white;
+  color:#1A3594;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   padding: 0px 5px;
   outline: none;
@@ -297,84 +371,62 @@ p{
 .komplain-text textarea{
   border: none;
   outline: none;
-  background-color: #e5e8ed;
+  background-color: white;
+  color: #1A3594;
   width: 100%;
   height: 100%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   padding: 0px 5px;
   resize: none;
 }
 
 .komplain-button{
-  margin-top: 10px;
-  width: 484px;
+  margin-top: 20px;
+  width: 570px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
 .komplain-button button{
-  background-color: #50a095;
-  width: 177px;
-  height: 36px;
-  border-radius: 50px;
+  background-color:#6B58B3;
+  width: 166px;
+  height: 39px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding: 5px;
   color: white;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .komplain-button button:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  transition: transform 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 2);
 }
 
 .footer{
   width: 100%;
   height: 111px;
-  background-color: #143562;
+  background-color: white;
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-logo{
   height: 100%;
-  width: 30%;
-  object-fit: cover;
-  border-radius: 10px;
-  padding: 26px 0px 26px 61px;
-}
-
-.footer-contact{
-  width: 40%;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  padding-right: 100px;
-}
-
-.footer-contact-text{
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  padding-left: 50px;
 }
 
 .footer-media{
-  width: 30%;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-media-text{
-  display: flex;
+  width: 25%;
   justify-content: center;
   align-items: center;
 }
@@ -383,4 +435,6 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
+  padding-left: 50px;
 }

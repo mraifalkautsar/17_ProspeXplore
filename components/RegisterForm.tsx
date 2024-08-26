@@ -32,6 +32,7 @@ export default function RegisterForm() {
                 return;
             } else {
                 console.log("User Registration Failed");
+                setError("");
             }
 
         } catch (error) {

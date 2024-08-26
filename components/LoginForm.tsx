@@ -1,18 +1,47 @@
 "use client"
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { signIn,useSession,signOut } from "next-auth/react";
 import React from "react";
 import Link from "next/link";
 
 const Dashboard = () => {
     const { data: session } = useSession();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+    const router = useRouter();
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        try {
+        const res = await signIn("credentials", {
+            email,
+            password,
+            redirect: false,
+        });
+
+        if (res && res.error) {
+            setError("Invalid Credentials");
+            return;
+        }
+
+        router.replace("dashboard");
+        } catch (error) {
+        console.log(error);
+        }
+  };
     return (
         <>
             {session ? (
                 <>
                     <div>
                         <p>{JSON.stringify (session)}</p>
-                        <button onClick={() => signOut({callbackUrl: "/Dashboard"})}
+                        <button onClick={() => signOut({callbackUrl: "/dashboard"})}
                             className="w-full px-4 py-2 text-base font-bold text-black bg-white rounded-md flex justify-center items-center"
                             >
                             <p>Sign Out</p>
@@ -22,6 +51,7 @@ const Dashboard = () => {
                 </>
             ):(
                 <>
+                    
                     <div className="relative w-full max-w-md px-8 pt-0.5 pb-8 space-y-6 bg-gray-200 shadow-lg rounded-lg">
                         <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
                             <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>

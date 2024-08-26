@@ -1,4 +1,4 @@
-import Dashboard from "@/components/Dashboard";
+import LoginForm from "@/components/LoginForm";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,13 +13,10 @@ export default function Home() {
           <a href="#Referral">Log In</a>
         </nav>
       </header>
-      
-      <Dashboard/>
-
-      <body>
-        <Link href="/authentication">Auth</Link>
-      </body>
-      
+    
+      <div>
+      <Link href="/authentication">Auth</Link>
+      </div>
     </main>
   );
 }

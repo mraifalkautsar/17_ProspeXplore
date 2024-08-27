@@ -6,17 +6,15 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import {redirect} from "next/navigation";
 
 export default async function Home() {
-  const session = await getServerSession({ ...authOptions, session: { strategy: undefined } });
+  const session = await getServerSession({ ...authOptions, session: { strategy: 'jwt' } });
+  console.log("Session:", session);
   
   if (session) {
     redirect("/dashboard")
   }
-  
 
   return (
-    <main className="bg-gradient-to-b from-[#1A3594] to-[#6B58B3] min-h-screen">
-        
-        
+    <main className="bg-gradient-to-b from-[#1A3594] to-[#6B58B3] min-h-screen"> 
       <RegisterForm/>
       <div className="flex absolute bottom-0">
           <img 

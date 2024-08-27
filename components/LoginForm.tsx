@@ -8,32 +8,30 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Dashboard = () => {
-    const { data: session } = useSession();
+export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-
+  
     const router = useRouter();
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+  
         try {
-        const res = await signIn("credentials", {
+          const res = await signIn("credentials", {
             email,
             password,
             redirect: false,
-        });
-
-        if (res && res.error) {
+          });
+  
+          if (res && res.error) {
             setError("Invalid Credentials");
             return;
-        }
-
-        router.replace("dashboard");
+          }
+  
+          router.replace("dashboard");
         } catch (error) {
-        console.log(error);
+          console.log(error);
         }
   };
     return (
@@ -91,5 +89,3 @@ const Dashboard = () => {
         
     );
 };
-
-export default Dashboard;

@@ -90,7 +90,15 @@ export default function RegisterForm() {
                     Already have an account? <Link href="/authentication_login" className="font-extrabold bg-gradient-to-r from-[#CAAACF] to-[#6B58B3] inline-block text-transparent bg-clip-text">Sign In</Link>
                 </p>
 
-            
+            {error && (
+                <div className="w-full px-4 py-2 rounded-md text-red-600">
+                    {error}
+                </div>
+            )}
+
+            <p className="my-4 text-center text-gray-950">
+                Sudah punya akun? <Link href="/authentication_login" className="font-medium text-blue-600 hover:text-blue-500">Masuk Akun</Link>
+            </p>
         </div>
     );
 }

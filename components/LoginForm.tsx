@@ -1,102 +1,3 @@
-/*
-
-const Dashboard = () => {
-    const { data: session } = useSession();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
-
-    const router = useRouter();
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        try {
-        const res = await signIn("credentials", {
-            email,
-            password,
-            redirect: false,
-        });
-
-        if (res && res.error) {
-            setError("Invalid Credentials");
-            return;
-        }
-
-        router.replace("dashboard");
-        } catch (error) {
-        console.log(error);
-        }
-  };
-    return (
-        <>
-            {session ? (
-                <>
-                    <div>
-                        <p>{JSON.stringify (session)}</p>
-                        <button onClick={() => signOut({callbackUrl: "/dashboard"})}
-                            className="w-full px-4 py-2 text-base font-bold text-black bg-white rounded-md flex justify-center items-center"
-                            >
-                            <p>Sign Out</p>
-
-                        </button>
-                    </div>
-                </>
-            ):(
-                <>
-                    <div className="relative w-full max-w-md px-8 pt-0.5 pb-8 space-y-6 bg-gray-200 shadow-lg rounded-lg">
-                        <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
-                            <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>
-                        </div>
-
-                        <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">MASUK AKUN</h2>
-
-                        <div className="w-full px-4 py-2 text-base font-bold text-black bg-white rounded-md flex justify-center items-center">
-                            <img className="w-4 h-4 mr-2" src="google-logo.png" alt="Google Logo" />
-                            <button onClick={() => signIn("google")}>Sign in with google</button>
-                        </div>
-
-                        <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">Or</h2>
-
-                        <form className="mt-6 space-y-4">
-                            <div className="mb-4 text-gray-950">
-                                <input
-                                    name="email"
-                                    type="email"
-                                    placeholder="username@gmail.com"
-                                    className="block w-full px-3 py-2 border-2 rounded-md"
-                                ></input>
-                            </div>
-                            <div className="mb-4 text-gray-950">
-                                <input
-                                    name="password"
-                                    type="password"
-                                    placeholder="password"
-                                    className="block w-full px-3 py-2 border-2 rounded-md"
-                                ></input>
-                            </div>
-                        </form>
-
-                        <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
-                            MASUK AKUN
-                        </button>
-
-                        <p className="my-4 text-center text-gray-950">
-                            Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
-                        </p>
-                    </div>
-                    
-                   
-                </>
-            ) }
-        </>
-        
-    );
-};
-
-export default Dashboard;
-*/
-
 "use client"
 
 import { useState } from "react";
@@ -105,6 +6,7 @@ import { useEffect } from "react";
 import { signIn,useSession,signOut } from "next-auth/react";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LoginForm() {
     const [email, setEmail] = useState("");
@@ -112,64 +14,67 @@ export default function LoginForm() {
     const [error, setError] = useState("");
   
     const router = useRouter();
-  
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-
-      try {
-        const res = await signIn("credentials", {
-          email,
-          password,
-          redirect: false,
-        });
-
-        if (res && res.error) {
-          setError("Invalid Credentials");
-          return;
-        }
-
-        router.replace("dashboard");
-      } catch (error) {
-        console.log(error);
-      }
-    };
+        e.preventDefault();
   
-    return (
+        try {
+          const res = await signIn("credentials", {
+            email,
+            password,
+            redirect: false,
+          });
+  
+          if (res && res.error) {
+            setError("Invalid Credentials");
+            return;
+          }
+  
+          router.replace("dashboard");
+        } catch (error) {
+          console.log(error);
+        }
+    };
+    return(
         <div className="relative w-full max-w-md px-8 pt-0.5 pb-8 space-y-6 bg-gray-200 shadow-lg rounded-lg">
-            <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
-                <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>
-            </div>
-            <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">MASUK AKUN</h2>
-    
-            <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                <div className="mb-4 text-gray-950">
-                    <input className="block w-full px-3 py-2 border-2 rounded-md"
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="text"
-                    placeholder="Email"
-                    />
-                </div>
-                <div className="mb-4 text-gray-950">
-                    <input
-                    className="block w-full px-3 py-2 border-2 rounded-md"
-                    onChange={(e) => setPassword(e.target.value)}
-                    type="password"
-                    placeholder="Password"
-                    />
-                </div>
-                <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
-                    MASUK AKUN
-                </button>
-                {error && (
-                <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
-                    {error}
-                </div>
-                )}
+            <div>
+                <div className="relative w-full max-w-md px-8 pt-0.5 pb-8 space-y-6 bg-gray-200 shadow-lg rounded-lg">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
+                        <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>
+                    </div>
+                    <div className="bg-gradient-to-b from-[#143562] to-[#8FC4B4] rounded-lg py-8 px-6">
+                        <h2 className="text-3xl text-white text-center font-bold font-sans pb-4">MASUK AKUN</h2>
+                    </div>
+                    <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                        <div className="mb-4 text-gray-950">
+                            <input className="block w-full px-3 py-2 border-2 rounded-md"
+                            onChange={(e) => setEmail(e.target.value)}
+                            type="text"
+                            placeholder="Email"
+                            />
+                        </div>
+                        <div className="mb-4 text-gray-950">
+                            <input
+                            className="block w-full px-3 py-2 border-2 rounded-md"
+                            onChange={(e) => setPassword(e.target.value)}
+                            type="password"
+                            placeholder="Password"
+                            />
+                        </div>
+                        <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
+                            MASUK AKUN
+                        </button>
+                        {error && (
+                        <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
+                            {error}
+                        </div>
+                        )}
 
-                <p className="my-4 text-center text-gray-950">
-                    Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
-                </p> 
-            </form>
+                        <p className="my-4 text-center text-gray-950">
+                            Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
+                        </p> 
+                    </form>
+                </div>
+            </div>
         </div>
     );
-  }
+}

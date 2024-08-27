@@ -14,8 +14,7 @@ export default async function Home() {
   
 
   return (
-    <main className="bg-[#03254c] min-h-screen flex items-center justify-center">
-      
+    <main className="bg-white min-h-screen flex items-center justify-center">
       <RegisterForm/>
     </main>
     // #d0efff

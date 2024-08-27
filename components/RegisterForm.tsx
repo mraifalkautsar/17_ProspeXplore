@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function RegisterForm() {
     const [email, setEmail] = useState("");
@@ -40,14 +41,11 @@ export default function RegisterForm() {
         }
     };
 
-    return (
-        <div className="relative w-full max-w-md px-8 pt-0.5 pb-8 space-y-6 bg-gray-200 shadow-lg rounded-lg">
-            <div className="absolute left-1/2 transform -translate-x-1/2 -top-12">
-                <h1 className="text-2xl text-white font-bold font-sans">PROSPEXPLORE</h1>
+    return (  
+        <div className="w-full max-w-md p-8 space-y-6">
+            <div className="bg-gradient-to-b from-[#143562] to-[#8FC4B4] rounded-lg py-8 px-6">
+                <h2 className="text-3xl text-white text-center font-bold font-sans">DAFTAR</h2>
             </div>
-
-            <h2 className="text-2xl text-gray-950 text-center font-bold font-sans">DAFTAR</h2>
-
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <div className="mb-4 text-gray-950">
                     <input

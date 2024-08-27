@@ -2,8 +2,31 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import React, { useRef, useState } from 'react';
+import { Navigation } from 'swiper/modules';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; 
+
+const slideData = [
+  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
+  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
+  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
+  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
+  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
+  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
+  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
+  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
+  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
+  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
+  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
+  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
+  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
+  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
+  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
+];
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -39,6 +62,27 @@ export default function Home() {
       alert("Yah, ada masalah ketika mengirimkan pesan.");
     }
   };
+
+  function slide(title: string, description: string) {
+    return (
+      <div className="bg-[#1A3594] shadow-lg rounded-lg p-4 text-white flex flex-col items-center 
+                      w-full md:w-[250px] sm:w-[200px] h-[400px] md:h-[350px] sm:h-[300px]">
+        <div className="w-full h-[200px] md:h-[175px] sm:h-[150px] mb-4 relative">
+          <Image 
+            src="/comp.png" 
+            alt="Slide Image" 
+            layout="fill" 
+            objectFit="cover" 
+            className="rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col flex-grow">
+          <p className="text-left text-lg font-semibold mb-2">{title}</p>
+          <p className="text-sm overflow-hidden text-ellipsis">{description}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <main>
@@ -76,28 +120,51 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="fakultas" className="fakultas">
-      <div style={{
-        display: "flex",
-        justifyContent: "center", // Center horizontally
-        alignItems: "center", // Center vertically
-        height: "100vh", // Full viewport height
-        textAlign: "center", // Center text in the div
-      }} >
-        <h1>Welcome to the Home Page</h1>
-        <button
-          onClick={handleRedirect}
-          style={{
-            backgroundColor: "black", // Black background
-            color: "white", // White text
-            padding: "10px 20px", // Padding for the button
-            border: "none", // Remove border
-            cursor: "pointer", // Pointer cursor on hover
-            fontSize: "16px", // Font size
-            borderRadius: "5px", // Rounded corners
-          }}>
-          Tombol placeholder buat ke page fakultas.
-        </button>
+      <div className="fakultas">
+      <h1 className='font-semibold text-bold text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Fakultas</h1>
+        <div className="flex flex-wrap max-w-screen-lg mx-auto">
+          <div className="w-full px-4 md:w-1/2 flex flex-col items-center">
+            <p className="text-xs text-[#1A3594] mb-10 xl:text-md text-left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+              Nullam euismod velit vel nunc faucibus, vel tincidunt <br />
+              nisi malesuada. Sed eget lacus vel orci volutpat venenatis. <br />
+              Phasellus eget eros non nisi lacinia bibendum. <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+              Nullam euismod velit vel nunc faucibus, vel tincidunt <br />
+              nisi malesuada. Sed eget lacus vel orci volutpat venenatis. <br />
+              Phasellus eget eros non nisi lacinia bibendum.
+            </p>
+          </div>
+          <div className="w-full px-4 md:w-1/2 flex items-center justify-center">
+            <img src="faculty.png" alt="" className="max-w-full" />
+          </div>
+        </div>
+        <div className="relative pb-10 flex items-center justify-center">
+        <Swiper
+          className="relative mt-10 mx-20 w-full max-w-screen-lg overflow-hidden"
+          loop={true}
+          spaceBetween={5}
+          slidesPerView={3}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[Navigation]}
+        >
+          {slideData.map((data, index) => (
+            <SwiperSlide key={index} className='text-black'>
+              {slide(data.title, data.description)}
+            </SwiperSlide>
+          ))}
+          <div className="swiper-button-prev absolute left-5 top-1/2 transform -translate-y-1/2 z-10">
+            <FaArrowLeft className="text-white" />
+          </div>
+          <div className="swiper-button-next absolute right-5 top-1/2 transform -translate-y-1/2 z-10">
+            <FaArrowRight className="text-white" />
+          </div>
+        </Swiper>
       </div>
       </div>
       
@@ -123,10 +190,12 @@ export default function Home() {
         </div>
         <div className="tes-minat-button-container"><button className="tes-minat-button">Test Here!</button></div>
       </div>
+      
       <form className="kontak" onSubmit={handleSubmit}>
         <div className="kontak-pic">
           <Image src="/contact-man.png" alt="contact" width={730} height={768}/>
         </div>
+        
         <div className="kontak-komplain">
           <div className="kontak-komplain-judul">
             <p>Let's Stay In Touch!</p>

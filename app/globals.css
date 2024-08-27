@@ -176,8 +176,9 @@ p{
 }
 
 .fakultas{
-  height: 982px;
+  height: auto;
   background-color: white;
+  padding-top: 40px;
 }
 
 .tes-minat{
@@ -186,6 +187,78 @@ p{
     url('/backgroundstrings.png') no-repeat center center;
   background-size: cover;
   height: 982px;
+}
+
+.page-fakultas {
+  background: 
+    linear-gradient(112.46deg, rgba(26, 53, 148, 0.8) 20.57%, rgba(107, 88, 179, 0.8) 99.71%),
+    url('/backgroundstrings.png') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.fakultas-nama {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: 700;
+  padding-top: 100px;
+}
+
+.fakultas-short-desc {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 50px 168px; /* Adjust margins to center horizontally */
+  display: flex; /* Use only if you need flex behavior */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; 
+  align-content: center;
+}
+
+.fakultas-get-to-know {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 10px;
+  padding: 0px 176px;
+}
+
+.fakultas-article {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 30px 176px; /* Padding for spacing */
+  gap: 20px; /* Add space between items if needed */
+}
+
+.fakultas-foto {
+  width: 100%; /* Full width of the parent container */
+  max-width: 400px; /* Maximum width to prevent it from growing too large */
+  height: auto; /* Maintain aspect ratio */
+  display: flex; /* Center image horizontally */
+  justify-content: center;
+}
+
+.fakultas-foto img {
+  width: 100%; /* Scale the image to fit the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.fakultas-long-desc {
+  /* Add styles for description */
+  flex: 1; /* Allow it to take remaining space */
+}
+
+.fakultas-graph {
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically (if needed) */
+  margin: 20px; /* Margin around the container */
+  padding: 20px; /* Padding inside the container */
+  max-width: 100%; /* Ensure it doesn’t exceed the viewport width */
 }
 
 .tes-minat-judul{

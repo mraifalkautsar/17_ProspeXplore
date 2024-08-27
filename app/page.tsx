@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 'use client';
 import Link from 'next/link';
 import Image from "next/image";
@@ -31,6 +32,9 @@ const slideData = [
 ];
 
 
+=======
+import Image from 'next/image';
+>>>>>>> Stashed changes
 
 export default function Home() {
 
@@ -58,6 +62,7 @@ export default function Home() {
   
   return (
     <main>
+<<<<<<< Updated upstream
 
       <section id="hero-section" className="pt-24 max-w-full mx-auto px-4 flex items-center justify-center bg-gradient-to-br from-[#1A3594] to-[#6B58B3]">
         <div className="container flex flex-wrap items-center justify-center">
@@ -151,6 +156,27 @@ export default function Home() {
         </div>
         <a href="\" className="mt-10  items-center justify-center text-base font-semibold text-black bg-white py-3 px-5 rounded-full hover:shadow-xl hover:opacity-70">Explore Now!</a>
       </section>
+=======
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        <Image src="/Orang.png" alt="Orang" width={500} height={500} />
+        <div style={{ marginLeft: '20px' }}>
+          <div className="form-container">
+            <form id="contact-form">
+              <label htmlFor="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+              
+              <label htmlFor="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required />
+              
+              <label htmlFor="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+>>>>>>> Stashed changes
     </main>
   );
 }

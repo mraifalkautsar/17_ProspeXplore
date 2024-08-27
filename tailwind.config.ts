@@ -13,8 +13,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      fontWeight: {
+        light: '100',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

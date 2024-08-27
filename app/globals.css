@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -64,4 +65,21 @@ body {
   transform: scale(1.2);
   text-shadow: 0 0 10px white,
                0 0 10px white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white; /* Atur warna panah navigasi */
+  width: 40px;  /* Atur lebar panah navigasi */
+  height: 40px; /* Atur tinggi panah navigasi */
+  /* Atur jarak dari konten slider */
+  margin: 0 10px;
+}
+
+.swiper-button-next {
+  right: 10px; /* Atur posisi panah kanan */
+}
+
+.swiper-button-prev {
+  right: 100px; /* Atur posisi panah kiri */
 }

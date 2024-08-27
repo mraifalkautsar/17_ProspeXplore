@@ -41,9 +41,9 @@ export default function Home() {
           <div className="header">
             <Image className="logo" src="/logo.png" alt="ProspeXplore" width={190} height={53} />
             <div className="navbar">
-              <Link href="#">Fakultas</Link>
-              <Link href="#">Tes Minat</Link>
-              <button className="sign-in-button">Sign In</button>
+              <Link href="#fakultas">Fakultas</Link>
+              <Link href="#tes-minat">Tes Minat</Link>
+              <Link href="#"><a className="sign-in-button">Sign In</a></Link>
             </div>
           </div>
         </div>
@@ -69,10 +69,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="fakultas">
+      <div id="fakultas" className="fakultas">
 
       </div>
-      <div className="tes-minat">
+      <div id="tes-minat" className="tes-minat">
         <div className="tes-minat-judul">
           <p className="text-white mr-3">Test your</p>
           <p className="text-violet-500">Minat</p>

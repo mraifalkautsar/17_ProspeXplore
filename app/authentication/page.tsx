@@ -18,7 +18,7 @@ export default async function Home() {
         
         
       <RegisterForm/>
-      <div className="flex">
+      <div className="flex absolute bottom-0">
           <img 
             src="Vector.png"
             alt="logo"

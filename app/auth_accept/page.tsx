@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <main className="bg-gradient-to-b from-[#1A3594] to-[#6B58B3] min-h-screen">
         <div className="w-full mx-auto items-center justify-center text-center pt-40">
-            <h2 className="font-poppins font-extrabold text-white text-4xl">Hey, Username</h2>
+            <div className="font-poppins font-extrabold text-4xl inline-flex">
+                <h2 className="text-white">Hey,</h2><h2 className="bg-gradient-to-r from-white to-[#6B58B3] text-transparent bg-clip-text">&nbsp;Username</h2>
+            </div>
             <p className="font-poppins text-white text-xl mt-4 font-semibold">Your account has been successfully registered!</p>
 
             <button 
@@ -16,7 +18,7 @@ export default function Home() {
         </div>
 
       
-        <div className="flex mt-28">
+        <div className="flex absolute bottom-0">
             <img 
                 src="Vector.png"
                 alt="logo"

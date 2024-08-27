@@ -54,7 +54,7 @@ export default function RegisterForm() {
                         onChange={(e) => setEmail(e.target.value)}
                         name="email"
                         type="email"
-                        placeholder="username@gmail.com"
+                        placeholder="Email"
                         className="block w-full px-3 py-2 border-2 rounded-md"
                     />
                 </div>
@@ -63,7 +63,7 @@ export default function RegisterForm() {
                         onChange={(e) => setPassword(e.target.value)}
                         name="password"
                         type="password"
-                        placeholder="password"
+                        placeholder="Password"
                         className="block w-full px-3 py-2 border-2 rounded-md"
                     />
                 </div>

@@ -1,8 +1,8 @@
 import { connectMongoDB } from "@/lib/mongodb";
-import User from "@/models/User";
+import User from "@/models/user";
 import { NextResponse } from "next/server";
 
-export async function POST(req: { json: () => PromiseLike<{ email: any; }> | { email: any; }; }) {
+export async function POST(req) {
   try {
     await connectMongoDB();
     const { email } = await req.json();

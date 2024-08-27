@@ -37,71 +37,57 @@ const Dashboard = () => {
         }
   };
     return (
-        <>
-            {session ? (
-                <>
-                    <div>
-                        <p>{JSON.stringify (session)}</p>
-                        <button onClick={() => signOut({callbackUrl: "/dashboard"})}
-                            className="w-full px-4 py-2 text-base font-bold text-black bg-white rounded-md flex justify-center items-center">
-                            <p>Sign Out</p>
+        <div className="w-1/2 items-center justify-center px-12 pt-20">
+            <div className="w-full "></div>
+                <h2 
+                className="text-4xl bg-gradient-to-r from-[#1A3594] to-[#6B58B3] font-extrabold font-poppins inline-block text-transparent bg-clip-text">
+                    Sign In To Your Account
+                </h2>
+                <p className="font-poppins text-[#1A3594]">Let's sign in to your account and get started!</p>
 
-                        </button>
+                <form onSubmit={handleSubmit} className="mt-6">
+                    <p className="font-semibold font-poppins bg-gradient-to-r from-[#1A3594] to-[#6B58B3] inline-block text-transparent bg-clip-text">Email Address</p>
+                    <div className="mb-4 text-gray-950">
+                        <input
+                            onChange={(e) => setEmail(e.target.value)}
+                            name="email"
+                            type="email"
+                            placeholder="Enter Email Address"
+                            className="block w-full px-3 py-3 border-2 rounded-full"
+                        />
                     </div>
-                </>
-            ):(
-                <>
-                    <div className="w-full max-w-md p-8 space-y-6">
-                        <div>
-                            <img
-                                src="/ProspeXplore.png"
-                                alt="logo"
-                                className="m-auto w-40"
-                            />
-                        </div>
-                        <div className="bg-gradient-to-b from-[#143562] to-[#8FC4B4] rounded-lg py-8 px-6">
-                            <h2 className="text-3xl text-white text-center font-bold font-sans pb-4">MASUK AKUN</h2>
+                    <p className="font-semibold font-poppins bg-gradient-to-r from-[#1A3594] to-[#6B58B3] inline-block text-transparent bg-clip-text">Password</p>
 
-                            <div className="mx-auto w-full px-4 py-2 text-base font-bold text-black bg-white rounded-md flex justify-center items-center">
-                                <img className="w-4 h-4 mr-2" src="google-logo.png" alt="Google Logo" />
-                                <button onClick={() => signIn("google")}>Sign in with google</button>
-                            </div>
-
-                            <h2 className="text-lg text-white text-center font-bold font-sans pt-4">ATAU</h2>
-
-                            <form className="mt-4 space-y-4">
-                                <div className="mb-4 text-gray-950">
-                                    <input
-                                        name="email"
-                                        type="email"
-                                        placeholder="username@gmail.com"
-                                        className="block w-full px-3 py-2 border-2 rounded-md"
-                                    ></input>
-                                </div>
-                                <div className="mb-4 text-gray-950">
-                                    <input
-                                        name="password"
-                                        type="password"
-                                        placeholder="password"
-                                        className="block w-full px-3 py-2 border-2 rounded-md"
-                                    ></input>
-                                </div>
-                                <button type="submit" className="w-full px-4 py-2 text-base font-bold text-white bg-[#03254c] rounded-md">
-                                MASUK AKUN
-                                </button>
-                            </form>
-
-                            
-
-                            <p className="mt-4 text-center text-gray-950">
-                                Belum punya akun? <Link href="/authentication" className="font-medium text-blue-600 hover:text-blue-500">Daftar</Link>
-                            </p>
-                        </div>
+                    <div className="mb-10 text-gray-950">
+                        <input
+                            onChange={(e) => setPassword(e.target.value)}
+                            name="password"
+                            type="password"
+                            placeholder="Enter Password"
+                            className="block w-full px-3 py-3 border-2 rounded-full"
+                        />
                     </div>
-                    
-                </>
-            ) }
-        </>
+                    <button
+                        type="submit"
+                        className="w-full px-4 py-3 text-base font-bold text-white bg-gradient-to-r from-[#1A3594] to-[#6B58B3] rounded-full"
+                    >
+                        Sign In
+                    </button>
+                </form>
+
+                {error && (
+                    <div className="w-full px-4 py-2 rounded-md text-red-600">
+                        {error}
+                    </div>
+                )}
+
+                <p className="my-4 text-center text-[#1A3594] font-poppins">
+                    Don't have an account? <Link href="/authentication" className="font-extrabold bg-gradient-to-r from-[#1A3594] to-[#6B58B3] inline-block text-transparent bg-clip-text">Sign Up</Link>
+                </p>
+
+            
+        </div>
+            
         
     );
 };

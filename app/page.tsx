@@ -17,6 +17,9 @@ export default function Home() {
       <div>
       <Link href="/authentication">Auth</Link>
       </div>
+      <div>
+      <Link href="/auth_accept">welcome</Link>
+      </div>
     </main>
   );
 }

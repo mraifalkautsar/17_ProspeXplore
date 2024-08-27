@@ -3,11 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  
+  const router = useRouter();
+  const handleRedirect = () => {
+      router.push("/fakultas/stei");
+    };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,7 +49,7 @@ export default function Home() {
             <div className="navbar">
               <Link href="#fakultas">Fakultas</Link>
               <Link href="#tes-minat">Tes Minat</Link>
-              <Link href="#"><a className="sign-in-button">Sign In</a></Link>
+              <Link href="#"><span className="sign-in-button">Sign In</span></Link>
             </div>
           </div>
         </div>
@@ -69,9 +75,32 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="fakultas" className="fakultas">
 
+      <div id="fakultas" className="fakultas">
+      <div style={{
+        display: "flex",
+        justifyContent: "center", // Center horizontally
+        alignItems: "center", // Center vertically
+        height: "100vh", // Full viewport height
+        textAlign: "center", // Center text in the div
+      }} >
+        <h1>Welcome to the Home Page</h1>
+        <button
+          onClick={handleRedirect}
+          style={{
+            backgroundColor: "black", // Black background
+            color: "white", // White text
+            padding: "10px 20px", // Padding for the button
+            border: "none", // Remove border
+            cursor: "pointer", // Pointer cursor on hover
+            fontSize: "16px", // Font size
+            borderRadius: "5px", // Rounded corners
+          }}>
+          Tombol placeholder buat ke page fakultas.
+        </button>
       </div>
+      </div>
+      
       <div id="tes-minat" className="tes-minat">
         <div className="tes-minat-judul">
           <p className="text-white mr-3">Test your</p>

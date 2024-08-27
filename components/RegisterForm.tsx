@@ -95,10 +95,6 @@ export default function RegisterForm() {
                     {error}
                 </div>
             )}
-
-            <p className="my-4 text-center text-gray-950">
-                Sudah punya akun? <Link href="/authentication_login" className="font-medium text-blue-600 hover:text-blue-500">Masuk Akun</Link>
-            </p>
         </div>
     );
 }

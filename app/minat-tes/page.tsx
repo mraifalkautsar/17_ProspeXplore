@@ -117,9 +117,9 @@ export default function Home() {
                           className="bg-[#1A3594] text-white p-3 rounded-lg"
                         >
                             <option value="">Select</option>
+                            <option value="Kantor">Kantor</option>
                             <option value="Remote">Remote</option>
                             <option value="Lapangan">Lapangan</option>
-                            <option value="Kantor">Kantor</option>
                         </select>
 
                         <label htmlFor="Tipe Kepribadian" className="mt-4 text-[#1A3594] font-bold font-poppins">Tipe Kepribadian</label>

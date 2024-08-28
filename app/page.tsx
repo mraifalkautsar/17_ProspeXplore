@@ -31,8 +31,10 @@ export default function Home() {
   const [message, setMessage] = useState("");
   
   const router = useRouter();
-  const handleRedirect = () => {
-      router.push("/fakultas/stei");
+  const handleRedirect = (title: string) => {
+      if (title === "Sekolah Teknik Elektro Informatika (STEI)"){
+        router.push("/fakultas/stei");
+      }
     };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -88,6 +90,7 @@ export default function Home() {
           <div className="header">
             <Image className="logo" src="/logo.png" alt="ProspeXplore" width={190} height={53} />
             <div className="navbar">
+              <Link href="/">Beranda</Link>
               <Link href="#fakultas">Fakultas</Link>
               <Link href="#tes-minat">Tes Minat</Link>
               <Link href="/authentication"><span className="sign-in-button">Sign In</span></Link>
@@ -117,11 +120,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="fakultas">
-      <h1 className='font-semibold text-bold text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Faculties</h1>
+      <div id="fakultas" className="fakultas">
+      <h1 className='font-bold text-poppins text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Fakultas</h1>
         <div className="flex flex-wrap max-w-screen-lg mx-auto">
           <div className="w-full px-4 md:w-1/2 flex flex-col items-center">
-            <p className="text-xs text-[#1A3594] mb-10 xl:text-md text-left">
+            <p className="text-sm text-[#1A3594] mb-10 xl:text-md text-left w-full">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
               Nullam euismod velit vel nunc faucibus, vel tincidunt <br />
               nisi malesuada. Sed eget lacus vel orci volutpat venenatis. <br />
@@ -138,7 +141,7 @@ export default function Home() {
         </div>
         <div className="relative pb-10 flex items-center justify-center">
         <Swiper
-          className="relative mt-10 mx-20 w-full max-w-screen-lg overflow-hidden"
+          className="relative mt-20 mx-20 w-full max-w-screen-lg overflow-hidden"
           loop={true}
           spaceBetween={5}
           slidesPerView={3}
@@ -151,7 +154,8 @@ export default function Home() {
           modules={[Navigation]}
         >
           {slideData.map((data, index) => (
-            <SwiperSlide key={index} className='text-black'>
+            <SwiperSlide key={index} className='text-black'
+            onClick={() => handleRedirect(data.title)}>
               {slide(data.title, data.description)}
             </SwiperSlide>
           ))}

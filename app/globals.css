@@ -72,7 +72,7 @@ p{
 
 }
 
-.navbar a{
+.navbar a, .navbar span{
   display: inline-block;
   position: relative;
   font-size: 18px;
@@ -82,12 +82,12 @@ p{
   text-decoration: none;
   transition: font-weight 0.3s ease;
 }
-.navbar a:hover{
+.navbar a:hover, .navbar span:hover{
   font-weight: 700;
   transition: 0.3s ease;
 }
 
-.navbar a::before{
+.navbar a::before, .navbar span::before{
   content: '';
   position: absolute;
   top: 100%;
@@ -98,7 +98,7 @@ p{
   transition: transform 0.3s ease;
 }
 
-.navbar a:hover::before{
+.navbar a:hover::before, .navbar span:hover::before{
   width: 100%;
 }
 
@@ -176,7 +176,7 @@ p{
 }
 
 .fakultas{
-  height: auto;
+  height: 982px;
   background-color: white;
   padding-top: 40px;
 }

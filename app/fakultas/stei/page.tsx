@@ -1,10 +1,29 @@
+"use client";
+
 import Link from 'next/link';
 import Image from "next/image";
+import globalStyles from "@/styles/Home.module.css";
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+  const handleNavClick = (id: string) => {
+      router.push(`/#${id}`);
+  };
   return (
     <div id="page-fakultas" className="page-fakultas">
       <main>
+          <div className="header-container">
+            <div className="header">
+              <Image className="logo" src="/logo.png" alt="ProspeXplore" width={190} height={53} />
+              <div className="navbar">
+                <Link href="/">Beranda</Link>
+                <span className="navbar-link" onClick={() => handleNavClick('fakultas')}>Fakultas</span>
+                <span className="navbar-link" onClick={() => handleNavClick('tes-minat')}>Tes Minat</span>
+                <Link href="/authentication"><span className="sign-in-button">Sign In</span></Link>
+              </div>
+            </div>
+          </div>
           <div className="fakultas-nama">
             Sekolah Teknik Elektro dan Informatika (STEI)
           </div>

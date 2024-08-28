@@ -138,7 +138,12 @@ export default function Home() {
                 Welcome to Prospexplore, your gateway to meaningful career insights through our comprehensive tracer study platform. Discover the paths of our graduates and explore endless possibilities for your own professional journey!</p>
             </div>
             <div>
-              <button className="explore-button">Explore Here</button>
+              <button className="explore-button"onClick={() => {
+          const fakultasElement = document.getElementById("fakultas");
+          if (fakultasElement) {
+            fakultasElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }}>Explore Here</button>
             </div>
           </div>
           <div className="tagline-pic">
@@ -212,7 +217,7 @@ export default function Home() {
             <Image className="tes-minat-fakta-data-pic" src="/target-full.png" alt="accuracy rate" width={590} height={298}/>
           </div>
         </div>
-        <div className="tes-minat-button-container"><button className="tes-minat-button">Test Here!</button></div>
+        <div className="tes-minat-button-container"><button  className="tes-minat-button" onClick={() => router.push("/minat-tes")}>Test Here!</button></div>
       </div>
       
       <form className="kontak" onSubmit={handleSubmit}>

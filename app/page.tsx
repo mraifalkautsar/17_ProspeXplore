@@ -11,18 +11,18 @@ import { Navigation } from 'swiper/modules';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; 
 
 const slideData = [
-  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
-  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
-  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
-  { title: "Sekolah Ilmu Teknologi Hayati (SITH)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
-  { title: "Fakultas Ilmu dan Teknologi Kebumian (FITB)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
-  { title: "Fakultas Matematika dan Ilmu Pengetahuan ALAM (FMIPA)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
-  { title: "Fakultas Seni Rupa dan Desain (FSRD)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
-  { title: "Fakultas Teknik Pertambangan dan Perminyakan (FTTM)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
-  { title: "Fakultas Teknik Sipil dan Lingkungan (FTSL)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
-  { title: "Sekolah Arsitektur, Perencanaan dan Pengembangan Kebijakan (SAPPK)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
-  { title: "Sekolah Bisnis dan Manajemen (SBM)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
-  { title: "Sekolah Farmasi (SF)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
+  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "As a leader in the field of electrical and informatics engineering, STEI prepares students to innovate in cutting-edge technologies, ensuring a strong foundation for careers in the rapidly evolving tech industry." },
+  { title: "Fakultas Teknik Industri (FTI)", description: "With a focus on optimizing complex systems and processes, FTI equips graduates with the skills to lead in industries such as manufacturing, logistics, and operations, driving efficiency and innovation." },
+  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "FTMD combines rigorous mechanical and aerospace engineering training, producing graduates capable of advancing technologies in sectors like automotive, aviation, and energy." },
+  { title: "Sekolah Ilmu Teknologi Hayati (SITH)", description: "SITH offers a comprehensive education in life sciences and biotechnology, positioning its graduates to contribute to advancements in healthcare, agriculture, and environmental management." },
+  { title: "Fakultas Ilmu dan Teknologi Kebumian (FITB)", description: "FITB specializes in earth sciences and technology, preparing students for impactful careers in geology, meteorology, and environmental conservation, crucial for sustainable development." },
+  { title: "Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)", description: "FMIPA provides a solid foundation in mathematics and natural sciences, fostering analytical and problem-solving skills that are essential in research, education, and industry." },
+  { title: "Fakultas Seni Rupa dan Desain (FSRD)", description: "FSRD nurtures creativity and innovation in visual arts and design, preparing students for dynamic careers in the creative industries, from digital media to product design." },
+  { title: "Fakultas Teknik Pertambangan dan Perminyakan (FTTM)", description: "FTTM is at the forefront of mining and petroleum engineering education, equipping students with the expertise to tackle challenges in energy production and resource management." },
+  { title: "Fakultas Teknik Sipil dan Lingkungan (FTSL)", description: "FTSL trains engineers in civil and environmental engineering, focusing on sustainable infrastructure development and environmental protection, crucial for urban planning and construction." },
+  { title: "Sekolah Arsitektur, Perencanaan dan Pengembangan Kebijakan (SAPPK)", description: "SAPPK offers an interdisciplinary approach to architecture, planning, and policy development, preparing students to create sustainable and innovative built environments." },
+  { title: "Sekolah Bisnis dan Manajemen (SBM)", description: "SBM provides a world-class business education, focusing on leadership, entrepreneurship, and innovation, essential for success in the global business landscape." },
+  { title: "Sekolah Farmasi (SF)", description: "SF offers a rigorous curriculum in pharmaceutical sciences, preparing graduates for careers in healthcare, research, and the pharmaceutical industry, contributing to public health and well-being." },  
 ];
 
 export default function Home() {
@@ -90,8 +90,8 @@ export default function Home() {
           <div className="header">
             <Image className="logo" src="/logo.png" alt="ProspeXplore" width={190} height={53} />
             <div className="navbar">
-              <Link href="/">Beranda</Link>
-              <Link href="#fakultas">Fakultas</Link>
+              <Link href="/">Home Page</Link>
+              <Link href="#fakultas">Faculty</Link>
               <Link href="#tes-minat">Tes Minat</Link>
               <Link href="/authentication"><span className="sign-in-button">Sign In</span></Link>
             </div>
@@ -121,52 +121,49 @@ export default function Home() {
       </div>
 
       <div id="fakultas" className="fakultas">
-      <h1 className='font-bold text-poppins text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Fakultas</h1>
+      <h1 className='font-bold text-poppins text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Faculty</h1>
         <div className="flex flex-wrap max-w-screen-lg mx-auto">
           <div className="w-full px-4 md:w-1/2 flex flex-col items-center">
-            <p className="text-sm text-[#1A3594] mb-10 xl:text-md text-left w-full">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-              Nullam euismod velit vel nunc faucibus, vel tincidunt <br />
-              nisi malesuada. Sed eget lacus vel orci volutpat venenatis. <br />
-              Phasellus eget eros non nisi lacinia bibendum. <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-              Nullam euismod velit vel nunc faucibus, vel tincidunt <br />
-              nisi malesuada. Sed eget lacus vel orci volutpat venenatis. <br />
-              Phasellus eget eros non nisi lacinia bibendum.
+            <p className="text-sm text-[#1A3594] mb-10 xl:text-md w-full font-semibold text-justify pt-5">
+            Bandung Institute of Technology (ITB) is proud to present 12 outstanding faculties, each renowned for academic excellence and career-focused education.
+            These faculties offer a diverse range of programs designed to equip students with the skills and knowledge needed to excel in today’s dynamic job market.
+            From engineering to the arts, ITB’s faculties prepare students for rewarding careers, fostering creativity, innovation, and leadership.
+            Discover your future at ITB, where education meets opportunity, and career prospects are limitless.
             </p>
           </div>
           <div className="w-full px-4 mb-4 md:w-1/2 flex items-center justify-center">
             <img src="faculty.png" alt="" className="max-w-full" />
           </div>
         </div>
-        <div className="relative pb-10 flex items-center justify-center">
-        <Swiper
-          className="relative mt-20 mx-20 w-full max-w-screen-lg overflow-hidden"
-          loop={true}
-          spaceBetween={5}
-          slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          modules={[Navigation]}
-        >
-          {slideData.map((data, index) => (
-            <SwiperSlide key={index} className='text-black'
-            onClick={() => handleRedirect(data.title)}>
-              {slide(data.title, data.description)}
-            </SwiperSlide>
-          ))}
-          <div className="swiper-button-prev absolute left-5 top-1/2 transform -translate-y-1/2 z-10">
-            <FaArrowLeft className="text-white" />
-          </div>
-          <div className="swiper-button-next absolute right-5 top-1/2 transform -translate-y-1/2 z-10">
-            <FaArrowRight className="text-white" />
-          </div>
-        </Swiper>
-      </div>
+          <div className="relative pb-10 flex items-center justify-center ">
+          <Swiper
+            className="relative mt-20 mx-20 w-full max-w-screen-lg overflow-hidden "
+            loop={true}
+            spaceBetween={5}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            modules={[Navigation]}
+          >
+            {slideData.map((data, index) => (
+              <SwiperSlide key={index} className='text-black'
+              onClick={() => handleRedirect(data.title)}>
+                {slide(data.title, data.description)}
+              </SwiperSlide>
+            ))}
+            <div className="swiper-button-prev absolute left-10 -ml-10 top-1/2 transform -translate-y-1/2 z-50">
+              <FaArrowLeft className="text-white" />
+            </div>
+            
+            <div className="swiper-button-next absolute right-5 top-1/2 transform -translate-y-1/2 z-10">
+              <FaArrowRight className="text-white" />
+                </div>
+          </Swiper>
+        </div>
       </div>
       
       <div id="tes-minat" className="tes-minat">
@@ -174,15 +171,15 @@ export default function Home() {
           <p className="text-white mr-3">Test your</p>
           <p className="text-violet-500">Minat</p>
         </div>
-        <div className="tes-minat-desc">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. </p>
+        <div className="tes-minat-desc text-justify">
+          <p>Discover your true academic passion with our comprehensive interest assessment. This tailored test evaluates your preferences across key areas including favorite subjects, primary interests, standout skills, ideal work environments, personality type, and learning style. By analyzing these crucial factors, we provide personalized recommendations to help you identify the most suitable faculty and academic programs that align with your unique profile and aspirations.</p>
         </div>
         <div className="tes-minat-fakta">
           <div className="tes-minat-fakta-desc">
             <div className="tes-minat-fakta-desc-judul">
               <p>What Model do We Use?</p>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus, vel tincidunt nisi malesuada. Sed eget lacus vel orci volutpat venenatis. Phasellus eget eros non nisi lacinia bibendum. </p>
+            <p className="text-justify">Our assessment utilizes a sophisticated multi-dimensional analysis model that combines the Big Five personality traits, and modern learning style frameworks. This integrated approach ensures a holistic evaluation of your interests, aptitudes, and preferences. By correlating your responses with extensive data on academic programs and career outcomes, our model provides highly accurate and personalized faculty recommendations, guiding you towards educational paths where you're most likely to thrive and succeed. </p>
             <div className="tes-minat-fakta-desc-desc"></div>
           </div>
           <div className="tes-minat-fakta-data">

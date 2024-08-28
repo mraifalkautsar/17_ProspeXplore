@@ -85,6 +85,7 @@ export default function Home() {
 
   return (
     <main>
+      <Link href="/profile">profile</Link>
       <div className="landing-page-top">
         <div className="header-container">
           <div className="header">

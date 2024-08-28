@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,4 +31,576 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+}
+
+.landing-page-top {
+  background: 
+    linear-gradient(112.46deg, rgba(26, 53, 148, 0.8) 20.57%, rgba(107, 88, 179, 0.8) 99.71%),
+    url('/backgroundstrings.png') no-repeat center center;
+  background-size: cover;
+  height: 982px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0px;
+}
+
+.header { 
+  width: 1400px; 
+  height: 70px;
+  padding: 10px 30px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-radius: 30px;
+}
+
+.logo{
+  object-fit: cover;
+
+}
+
+.navbar a, .navbar span{
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1A3594;
+  margin-left: 40px; 
+  text-decoration: none;
+  transition: font-weight 0.3s ease;
+}
+.navbar a:hover, .navbar span:hover{
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.navbar a::before, .navbar span::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: #1A3594;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before, .navbar span:hover::before{
+  width: 100%;
+}
+
+.sign-in-button{
+  background-color: #1A3594;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-left: 40px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sign-in-button:hover {
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.tagline-container{
+  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagline-text{
+  width: 800px;
+  padding: 40px 50px;
+}
+
+.tagline-pic{
+  width: 700px;
+  padding: 25px 50px;
+}
+
+.welcome-text{
+  font-size: 30px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  height: 60px;
+}
+
+.app-name{
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  height: 139px;
+}
+
+.app-description{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  height: 120px;
+}
+
+.explore-button{
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 188px;
+  margin-top: 50px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.explore-button:hover {
+  box-shadow: 8px 3px 10px rgba(0, 0, 0, 2);
+}
+
+.fakultas{
+  height: 982px;
+  background-color: white;
+  padding-top: 40px;
+}
+
+.tes-minat{
+  background: 
+    linear-gradient(112.46deg, rgba(26, 53, 148, 0.8) 20.57%, rgba(107, 88, 179, 0.8) 99.71%),
+    url('/backgroundstrings.png') no-repeat center center;
+  background-size: cover;
+  height: 982px;
+}
+
+.page-fakultas {
+  background: 
+    linear-gradient(112.46deg, rgba(26, 53, 148, 0.8) 20.57%, rgba(107, 88, 179, 0.8) 99.71%),
+    url('/backgroundstrings.png') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.fakultas-nama {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: 700;
+  padding-top: 100px;
+}
+
+.fakultas-short-desc {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 50px 168px; /* Adjust margins to center horizontally */
+  display: flex; /* Use only if you need flex behavior */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; 
+  align-content: center;
+}
+
+.fakultas-get-to-know {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 10px;
+  padding: 0px 176px;
+}
+
+.fakultas-article {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 30px 176px; /* Padding for spacing */
+  gap: 20px; /* Add space between items if needed */
+}
+
+.fakultas-foto {
+  width: 100%; /* Full width of the parent container */
+  max-width: 400px; /* Maximum width to prevent it from growing too large */
+  height: auto; /* Maintain aspect ratio */
+  display: flex; /* Center image horizontally */
+  justify-content: center;
+}
+
+.fakultas-foto img {
+  width: 100%; /* Scale the image to fit the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.fakultas-long-desc {
+  /* Add styles for description */
+  flex: 1; /* Allow it to take remaining space */
+}
+
+.fakultas-graph {
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically (if needed) */
+  margin: 20px; /* Margin around the container */
+  padding: 20px; /* Padding inside the container */
+  max-width: 100%; /* Ensure it doesn’t exceed the viewport width */
+}
+
+.tes-minat-judul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: 700;
+  padding-top: 100px;
+}
+
+.tes-minat-desc{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100px;
+  margin: 0px 168px;
+  padding: 0px 5rem 0px 5rem;
+  margin-top: 50px;
+  color: white;
+}
+
+.tes-minat-fakta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 176px;
+}
+
+.tes-minat-fakta-desc{
+  width: 560px;
+  height: 236px;
+  padding-top: 50px;
+  margin-top: 30px;
+  margin-right: 50px;
+  color: white;
+}
+
+.tes-minat-fakta-desc-judul{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.tes-minat-fakta-desc-desc{
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.tes-minat-fakta-pic{
+  width: 590px;
+  height: 298px;
+}
+
+.tes-minat-button-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.tes-minat-button{
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 188px;
+  margin-top: 50px;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tes-minat-button:hover {
+  box-shadow: 8px 3px 10px rgba(0, 0, 0, 2);
+}
+
+.kontak{
+  height: 860px;
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.kontak-pic{
+  width: 50%;
+  padding-left: 75px;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.kontak-komplain{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.kontak-komplain-judul{
+  font-size: 65px;
+  font-weight: 700;
+  color: #1A3594;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-shadow: 4px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.komplain-container{
+  width: 600px;
+  height: 565px;
+  border-radius: 36px;
+  padding-left: 52px;
+  padding-right: 52px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: #1A3594;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+input::placeholder{
+  color: #1A3594;
+}
+
+textarea::placeholder{
+  color: #1A3594;
+  font-style: italic;
+}
+
+.email, .no-telp{
+  background-color: white;
+  width: 500px;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  padding: 5px;
+  border-width: 1.5px;
+  border-color: black;
+  margin-top: 25px;
+  color:#1A3594;
+}
+
+.komplain-logo{
+  margin: 15px 15px;
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+.komplain-logo-email{
+  margin: 15px 15px;
+  height: 16px;
+  width: 20px;
+  object-fit: cover;
+}
+
+.komplain-text{
+  background-color: white;
+  width: 500px;
+  height: 213px;
+  border-radius: 20px;
+  display: flex;
+  padding: 15px;
+  margin-top: 80px;
+  border-width: 1.5px;
+  border-color: black;
+  color: #1A3594;
+}
+
+.email input, .no-telp input{
+  border: none;
+  background-color: white;
+  color:#1A3594;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 5px;
+  outline: none;
+}
+
+.komplain-text textarea{
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #1A3594;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 5px;
+  resize: none;
+}
+
+.komplain-button{
+  margin-top: 20px;
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.komplain-button button{
+  background-color:#6B58B3;
+  width: 166px;
+  height: 39px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.komplain-button button:hover {
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 2);
+}
+
+.footer{
+  width: 100%;
+  height: 111px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.footer-media{
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-media-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+/* Style for dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for dropdown button */
+.dropdown-button {
+  display: inline-flex;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: white !important; /* Set text color to white */
+  background-color: #1A3594; /* Blue background color */
+  padding: 10px 20px; /* Padding for better appearance */
+  text-decoration: none;
+  border-radius: 30px; /* Rounded edges */
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer; /* Change cursor to a hand */
+}
+
+.dropdown-button span{
+  display: inline-flex;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: white !important; /* Set text color to white */
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer; /* Change cursor to a hand */
+}
+
+.dropdown-button img {
+  margin-left: 8px; /* Add some space between the text and arrow */
+}
+
+.dropdown-button:hover {
+  background-color: #142764; /* Darker blue on hover */
+  font-weight: 600; /* Slightly bolder font on hover */
+  text-decoration: none !important;
+}
+
+/* Style for dropdown menu */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 22px; /* Align dropdown menu to the right */
+  top: 110%;
+  background-color: #1A3594; /* Dark blue background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-width: 150px;
+  z-index: 1;
+}
+
+
+/* Style for dropdown links */
+.dropdown-menu a, .dropdown-menu button{
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  border: none; /* Remove white lines between links */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.dropdown-menu button{
+  display: inline-flex;
+  position: relative;
+  margin-left: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white !important; /* Set text color to white */
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer; /* Change cursor to a hand */
+}
+
+.dropdown-menu a:hover, .dropdown-menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly white background on hover */
+  border-radius: 8px; /* Rounded corners on hover */
+  text-decoration: none !important;
+}
+
+/* Remove border from the last link (not necessary since borders are removed) */
+.dropdown-menu a:last-child, .dropdown-menu button:last-child {
+  border-bottom: none;
 }

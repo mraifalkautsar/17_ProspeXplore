@@ -92,7 +92,7 @@ export default function Home() {
             <div className="navbar">
               <Link href="/">Beranda</Link>
               <Link href="#fakultas">Fakultas</Link>
-              <Link href="#tes-minat">Tes Minat</Link>
+              <Link href="/minat-tes">Tes Minat</Link>
               <Link href="/authentication"><span className="sign-in-button">Sign In</span></Link>
             </div>
           </div>

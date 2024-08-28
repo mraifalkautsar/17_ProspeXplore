@@ -2,11 +2,13 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function RegisterForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -29,6 +31,7 @@ export default function RegisterForm() {
                 const form = e.target as HTMLFormElement;
                 form.reset();
                 console.log("User Registration Succeeded");
+                router.push("/authentication_login");
                 return;
             } else {
                 console.log("User Registration Failed");

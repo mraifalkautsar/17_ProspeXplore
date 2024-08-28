@@ -13,6 +13,10 @@ export default function UserInfo() {
     router.push("/authentication");
   };
 
+  const handleGetStarted = () => {
+    router.push("/");
+  }
+
   return (
       <div className="w-full mx-auto items-center justify-center text-center pt-40">
         <div className="font-poppins font-extrabold text-4xl inline-flex">
@@ -23,6 +27,11 @@ export default function UserInfo() {
             onClick={() => signOut({ callbackUrl: "/authentication" })}
             className="w-40 rounded-full bg-gradient-to-r from-[#CAAACF] to-[#6B58B3] text-white font-poppins font-extrabold m-8 py-3 px-4 shadow-lg">
                 Log Out
+        </button>
+        <button
+          onClick={handleGetStarted}
+          className="w-40 rounded-full bg-gradient-to-r from-[#CAAACF] to-[#6B58B3] text-white font-poppins font-extrabold m-8 py-3 px-4 shadow-lg">
+          Get Started
         </button>
       </div>
     );

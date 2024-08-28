@@ -1,13 +1,54 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
 
+export default function Home() {
+  const [pelajaranFavorit, setPelajaranFavorit] = useState("");
+  const [minatUtama, setMinatUtama] = useState("");
+  const [keterampilanUnggulan, setKeterampilanUnggulan] = useState("");
+  const [lingkunganKerja, setLingkunganKerja] = useState("");
+  const [tipeKepribadian, setTipeKepribadian] = useState("");
+  const [gayaBelajar, setGayaBelajar] = useState("");
+  const [fakultas, setFakultas] = useState<string | null>(null);
 
-export default async function Home() {
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/predict", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        pelajaranFavorit,
+        minatUtama,
+        keterampilanUnggulan,
+        lingkunganKerja,
+        tipeKepribadian,
+        gayaBelajar,
+      }),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      setFakultas(result.fakultas); // Assuming result.fakultas is a single value, adjust if it's an array
+      // Optional redirect based on result or other logic
+      if (result.fakultas === "Sekolah Teknik Elektro Informatika (STEI)") {
+        router.push("/fakultas/stei");
+      }
+    } else {
+      console.error(result.message || 'An error occurred');
+    }
+  };
 
   return (
     <main className="bg-gradient-to-b from-[#1A3594] to-[#6B58B3] min-h-screen"> 
-        <div className="">
+        <div>
             <div className="header-container">
                 <div className="header">
                     <Image className="logo" src="/logo.png" alt="ProspeXplore" width={190} height={53} />
@@ -25,10 +66,14 @@ export default async function Home() {
                 </div>
                 
                 <div className="max-w-md bg-white py-10 px-20 mt-5 rounded-lg flex flex-col ">
-
-                    <form className="flex flex-col space-y-4">
+                    <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                         <label htmlFor="Pelajaran Favorit" className="text-[#1A3594] font-bold font-poppins">Pelajaran Favorit</label>
-                        <select name="Pelajaran Favorit" className="bg-[#1A3594] text-white p-3 rounded-lg">
+                        <select 
+                          value={pelajaranFavorit} 
+                          onChange={(e) => setPelajaranFavorit(e.target.value)} 
+                          className="bg-[#1A3594] text-white p-3 rounded-lg"
+                        >
+                            <option value="">Select</option>
                             <option value="Kimia">Kimia</option>
                             <option value="Matematika">Matematika</option>
                             <option value="Fisika">Fisika</option>
@@ -37,9 +82,14 @@ export default async function Home() {
                         </select>
 
                         <label htmlFor="Minat Utama" className="mt-4 text-[#1A3594] font-bold font-poppins">Minat Utama</label>
-                        <select name="Minat Utama" className="bg-[#1A3594] text-white p-3 rounded-lg">
+                        <select 
+                          value={minatUtama} 
+                          onChange={(e) => setMinatUtama(e.target.value)} 
+                          className="bg-[#1A3594] text-white p-3 rounded-lg"
+                        >
+                            <option value="">Select</option>
                             <option value="Bisnis">Bisnis</option>
-                            <option value="Kesehatan" >Kesehatan</option>
+                            <option value="Kesehatan">Kesehatan</option>
                             <option value="Sains">Sains</option>
                             <option value="Seni">Seni</option>
                             <option value="Teknologi">Teknologi</option>
@@ -47,7 +97,12 @@ export default async function Home() {
                         </select>
                         
                         <label htmlFor="Keterampilan Unggulan" className="mt-4 text-[#1A3594] font-bold font-poppins">Keterampilan Unggulan</label>
-                        <select name="Keterampilan Unggulan" className="bg-[#1A3594] text-white p-3 rounded-lg">
+                        <select 
+                          value={keterampilanUnggulan} 
+                          onChange={(e) => setKeterampilanUnggulan(e.target.value)} 
+                          className="bg-[#1A3594] text-white p-3 rounded-lg"
+                        >
+                            <option value="">Select</option>
                             <option value="Kreativitas">Kreativitas</option>
                             <option value="Teknis">Teknis</option>
                             <option value="Komunikasi">Komunikasi</option>
@@ -56,49 +111,64 @@ export default async function Home() {
                         </select>
 
                         <label htmlFor="Lingkungan Kerja" className="mt-4 text-[#1A3594] font-bold font-poppins">Lingkungan Kerja</label>
-                        <select name="Lingkungan Kerja" className="bg-[#1A3594] text-white p-3 rounded-lg">
+                        <select 
+                          value={lingkunganKerja} 
+                          onChange={(e) => setLingkunganKerja(e.target.value)} 
+                          className="bg-[#1A3594] text-white p-3 rounded-lg"
+                        >
+                            <option value="">Select</option>
                             <option value="Remote">Remote</option>
                             <option value="Lapangan">Lapangan</option>
                             <option value="Kantor">Kantor</option>
                         </select>
 
                         <label htmlFor="Tipe Kepribadian" className="mt-4 text-[#1A3594] font-bold font-poppins">Tipe Kepribadian</label>
-                        <select name="Tipe Kepribadian" className="bg-[#1A3594] text-white p-3 rounded-lg">
+                        <select 
+                          value={tipeKepribadian} 
+                          onChange={(e) => setTipeKepribadian(e.target.value)} 
+                          className="bg-[#1A3594] text-white p-3 rounded-lg"
+                        >
+                            <option value="">Select</option>
                             <option value="Ekstrovert">Ekstrovert</option>
                             <option value="Introvert">Introvert</option>
                         </select>
                         
                         <label htmlFor="Gaya Belajar" className="mt-4 text-[#1A3594] font-bold font-poppins">Gaya Belajar</label>
-                        <select name="Gaya Belajar" className="bg-[#1A3594] text-white p-3 rounded-lg">
+                        <select 
+                          value={gayaBelajar} 
+                          onChange={(e) => setGayaBelajar(e.target.value)} 
+                          className="bg-[#1A3594] text-white p-3 rounded-lg"
+                        >
+                            <option value="">Select</option>
                             <option value="Visual">Visual</option>
                             <option value="Auditori">Auditori</option>
                             <option value="Kinestetik">Kinestetik</option>
                         </select>
-                        
 
+                        <button type="submit" className="bg-[#6B58B3] rounded-full mt-6 py-3 px-6 text-white font-poppins font-bold shadow-lg">
+                            Submit
+                        </button>
                     </form>
 
-                    <button className="bg-[#6B58B3] rounded-full mt-6 py-3 px-6 text-white font-poppins font-bold shadow-lg">
-                        Submit
-                    </button>
+                      <div className="mt-6">
+                        <h3 className="text-black font-bold">Recommended Fakultas:</h3>
+                        <p className="text-black">{fakultas}</p>
+                      </div>
                 </div>
             </div>
             <div className="flex fixed bottom-0">
                 <img 
-                    src="Vector.png"
+                    src="/Vector.png"
                     alt="logo"
                     className="h-8 my-6 ml-6 mr-2"
                 />
                 <img
-                    src="Frame 13.png"
+                    src="/Frame 13.png"
                     alt="name"
                     className="h-8 mt-6"
                 />
             </div>
-            
         </div>
-        
-        
     </main>
   );
 }

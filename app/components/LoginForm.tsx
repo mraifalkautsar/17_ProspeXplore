@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { signIn,useSession,signOut } from "next-auth/react";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function LoginForm() {
     const [email, setEmail] = useState("");

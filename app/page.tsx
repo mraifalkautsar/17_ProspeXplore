@@ -23,9 +23,6 @@ const slideData = [
   { title: "Sekolah Arsitektur, Perencanaan dan Pengembangan Kebijakan (SAPPK)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
   { title: "Sekolah Bisnis dan Manajemen (SBM)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
   { title: "Sekolah Farmasi (SF)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
-  { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod velit vel nunc faucibus," },
-  { title: "Fakultas Teknik Industri (FTI)", description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Duis aute irure dolor in reprehenderit," },
-  { title: "Fakultas Teknik Mesin dan Dirgantara (FTMD)", description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ," },
 ];
 
 export default function Home() {
@@ -121,7 +118,7 @@ export default function Home() {
       </div>
 
       <div className="fakultas">
-      <h1 className='font-semibold text-bold text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Fakultas</h1>
+      <h1 className='font-semibold text-bold text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Faculties</h1>
         <div className="flex flex-wrap max-w-screen-lg mx-auto">
           <div className="w-full px-4 md:w-1/2 flex flex-col items-center">
             <p className="text-xs text-[#1A3594] mb-10 xl:text-md text-left">
@@ -135,7 +132,7 @@ export default function Home() {
               Phasellus eget eros non nisi lacinia bibendum.
             </p>
           </div>
-          <div className="w-full px-4 md:w-1/2 flex items-center justify-center">
+          <div className="w-full px-4 mb-4 md:w-1/2 flex items-center justify-center">
             <img src="faculty.png" alt="" className="max-w-full" />
           </div>
         </div>

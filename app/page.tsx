@@ -37,6 +37,13 @@ export default function Home() {
       }
     };
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -93,10 +100,23 @@ export default function Home() {
               <Link href="/">Beranda</Link>
               <Link href="#fakultas">Fakultas</Link>
               <Link href="#tes-minat">Tes Minat</Link>
-              <Link href="/authentication"><span className="sign-in-button">Sign In</span></Link>
+              <div className="dropdown">
+              <span className="dropdown-button" onClick={toggleDropdown}>
+                Hey, Username ↓
+              </span>
+                {dropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link href="/authentication">Sign In</Link>
+                    <Link href="/settings">Settings</Link>
+                    <Link href="/logout">Log Out</Link>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
+
+
         
         <div className="tagline-container">
           <div className="tagline-text">

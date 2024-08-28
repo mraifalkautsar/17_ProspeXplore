@@ -517,3 +517,69 @@ textarea::placeholder{
   padding-top: 40px;
   padding-left: 50px;
 }
+
+/* Style for dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for dropdown button */
+.dropdown-button {
+  display: inline-flex;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: white; /* Set text color to white */
+  background-color: #1A3594; /* Blue background color */
+  padding: 10px 20px; /* Padding for better appearance */
+  margin-left: 40px;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded edges */
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer; /* Change cursor to a hand */
+}
+
+.dropdown-button img {
+  margin-left: 8px; /* Add some space between the text and arrow */
+}
+
+.dropdown-button:hover {
+  background-color: #142764; /* Darker blue on hover */
+  font-weight: 600; /* Slightly bolder font on hover */
+}
+
+/* Style for dropdown menu */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 22px; /* Align dropdown menu to the right */
+  top: 110%;
+  background-color: #1A3594; /* Dark blue background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-width: 150px;
+  z-index: 1;
+}
+
+/* Style for dropdown links */
+.dropdown-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  border: none; /* Remove white lines between links */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly white background on hover */
+  border-radius: 8px; /* Rounded corners on hover */
+  text-decoration: none
+}
+
+/* Remove border from the last link (not necessary since borders are removed) */
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}

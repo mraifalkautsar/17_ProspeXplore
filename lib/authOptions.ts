@@ -2,7 +2,7 @@ import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcryptjs';
 import { connectMongoDB } from "@/lib/mongodb";
-import User from '@/models/User';
+const User = require('@/models/user');
 
 import GoogleProvider from "next-auth/providers/google";
 

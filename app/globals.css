@@ -272,14 +272,18 @@ p{
 }
 
 .tes-minat-desc{
-  width: 1174px;
+  width: 80%;
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   font-size: 16px;
   font-weight: 400;
   height: 100px;
   margin: 0px 168px;
+  padding: 0px 5rem 0px 5rem;
   margin-top: 50px;
+  color: white;
 }
 
 .tes-minat-fakta{
@@ -295,6 +299,7 @@ p{
   padding-top: 50px;
   margin-top: 30px;
   margin-right: 50px;
+  color: white;
 }
 
 .tes-minat-fakta-desc-judul{
@@ -346,6 +351,7 @@ p{
   height: 860px;
   background-color: white;
   display: flex;
+  width: 100%;
 }
 
 .kontak-pic{
@@ -371,7 +377,7 @@ p{
 }
 
 .komplain-container{
-  width: 673px;
+  width: 600px;
   height: 565px;
   border-radius: 36px;
   padding-left: 52px;
@@ -393,7 +399,7 @@ textarea::placeholder{
 
 .email, .no-telp{
   background-color: white;
-  width: 570px;
+  width: 500px;
   height: 60px;
   border-radius: 20px;
   display: flex;
@@ -419,7 +425,7 @@ textarea::placeholder{
 
 .komplain-text{
   background-color: white;
-  width: 570px;
+  width: 500px;
   height: 213px;
   border-radius: 20px;
   display: flex;
@@ -456,7 +462,7 @@ textarea::placeholder{
 
 .komplain-button{
   margin-top: 20px;
-  width: 570px;
+  width: 500px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

@@ -1,6 +1,6 @@
 // pages/api/contact.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "../../lib/mongodb"; // Adjust the path based on your project structure
+import clientPromise from "../../lib/mongodb2"; // Adjust the path based on your project structure
 
 type ContactData = {
   email: string;

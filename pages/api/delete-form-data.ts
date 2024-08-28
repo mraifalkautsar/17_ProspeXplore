@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import clientPromise from '../../lib/mongodb';
+import clientPromise from '../../lib/mongodb2';
 import { ObjectId } from 'mongodb'; // Import ObjectId from mongodb
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {

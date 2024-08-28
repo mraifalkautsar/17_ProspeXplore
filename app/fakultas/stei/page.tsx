@@ -5,8 +5,15 @@ import Image from "next/image";
 import globalStyles from "@/styles/Home.module.css";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
+import { signOut } from 'next-auth/react';
 
 export default function Home() {
+  const { data: session } = useSession();
+  const handleSignOut = async () => {
+    await signOut();
+    router.push("/");
+  };
   const router = useRouter();
   const handleNavClick = (id: string) => {
       router.push(`/#${id}`);
@@ -27,13 +34,13 @@ export default function Home() {
                 <span className="navbar-link" onClick={() => handleNavClick('tes-minat')}>Tes Minat</span>
                 <div className="dropdown">
                 <span className="dropdown-button" onClick={toggleDropdown}>
-                  Hey, Username ↓
+                  Hey, <span>&nbsp;{session?.user?.email}</span> ↓
                 </span>
                 {dropdownOpen && (
                   <div className="dropdown-menu">
                     <Link href="/authentication">Sign In</Link>
                     <Link href="/settings">Settings</Link>
-                    <Link href="/logout">Log Out</Link>
+                    <button onClick={() => signOut({ callbackUrl: "/" })}>Log Out</button>
                   </div>
                 )};
                   </div>

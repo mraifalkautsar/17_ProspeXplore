@@ -9,6 +9,8 @@ import 'swiper/css/navigation';
 import React, { useRef, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; 
+import { useSession } from "next-auth/react";
+import { signOut } from "next-auth/react";
 
 const slideData = [
   { title: "Sekolah Teknik Elektro Informatika (STEI)", description: "As a leader in the field of electrical and informatics engineering, STEI prepares students to innovate in cutting-edge technologies, ensuring a strong foundation for careers in the rapidly evolving tech industry." },
@@ -29,6 +31,11 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const { data: session } = useSession();
+  const handleSignOut = async () => {
+    await signOut();
+    router.push("/");
+  };
   
   const router = useRouter();
   const handleRedirect = (title: string) => {
@@ -102,13 +109,13 @@ export default function Home() {
               <Link href="#tes-minat">Tes Minat</Link>
               <div className="dropdown">
               <span className="dropdown-button" onClick={toggleDropdown}>
-                Hey, Username ↓
+                Hey,<span>&nbsp;{session?.user?.email}</span> ↓
               </span>
                 {dropdownOpen && (
                   <div className="dropdown-menu">
                     <Link href="/authentication">Sign In</Link>
                     <Link href="/settings">Settings</Link>
-                    <Link href="/logout">Log Out</Link>
+                    <button onClick={() => signOut({ callbackUrl: "/" })}>Log Out</button>
                   </div>
                 )}
               </div>
@@ -141,7 +148,7 @@ export default function Home() {
       </div>
 
       <div id="fakultas" className="fakultas">
-      <h1 className='font-bold text-poppins text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Fakultas</h1>
+      <h1 className='font-bold text-poppins text-7xl pb-10 flex items-center justify-center text-[#1A3594]' style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.25)" }}>Faculties</h1>
         <div className="flex flex-wrap max-w-screen-lg mx-auto">
           <div className="w-full px-4 md:w-1/2 flex flex-col items-center">
             <p className="text-sm text-[#1A3594] mb-10 xl:text-md text-left w-full">

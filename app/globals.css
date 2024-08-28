@@ -530,7 +530,7 @@ textarea::placeholder{
   position: relative;
   font-size: 18px;
   font-weight: 500;
-  color: white; /* Set text color to white */
+  color: white !important; /* Set text color to white */
   background-color: #1A3594; /* Blue background color */
   padding: 10px 20px; /* Padding for better appearance */
   margin-left: 40px;
@@ -547,6 +547,7 @@ textarea::placeholder{
 .dropdown-button:hover {
   background-color: #142764; /* Darker blue on hover */
   font-weight: 600; /* Slightly bolder font on hover */
+  text-decoration: none !important;
 }
 
 /* Style for dropdown menu */
@@ -576,7 +577,7 @@ textarea::placeholder{
 .dropdown-menu a:hover {
   background-color: rgba(255, 255, 255, 0.1); /* Slightly white background on hover */
   border-radius: 8px; /* Rounded corners on hover */
-  text-decoration: none
+  text-decoration: none !important;
 }
 
 /* Remove border from the last link (not necessary since borders are removed) */

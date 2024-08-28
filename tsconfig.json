@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/mongodb.js", "pages/api/contact.ts", "lib/mongodb.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/mongodb.js", "pages/api/contact.ts", "lib/mongodb2.js"],
   "exclude": ["node_modules"]
 }

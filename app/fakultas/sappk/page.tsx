@@ -48,36 +48,36 @@ export default function Home() {
             </div>
           </div>
           <div className="fakultas-nama">
-            Sekolah Teknik Elektro dan Informatika (STEI)
+            Sekolah Arsitektur, Perencanaan dan Pengembangan Kebijakan (SAPPK)
           </div>
 
           <div className="fakultas-article">
               <div className="fakultas-long-desc">
-                STEI ITB is at the forefront of technological education in Indonesia. Our programs in electrical engineering and informatics blend cutting-edge theory with practical applications. 
-                We prepare students to become innovators and leaders in the rapidly evolving fields of technology and computer science. With world-class faculty and state-of-the-art facilities, STEI ITB offers an unparalleled educational experience for aspiring engineers and technologists. 
-                At STEI ITB, we offer a comprehensive learning environment that goes beyond traditional classroom education. Our students engage in hands-on projects, collaborative research, and industry partnerships that provide real-world experience. We emphasize innovation, critical thinking, and problem-solving skills to prepare our graduates for the challenges of the digital age. With a strong focus on both theoretical knowledge and practical skills, STEI ITB graduates are well-equipped to drive technological advancements and shape the future of Indonesia's tech industry. Join us to be part of a community dedicated to excellence in electrical engineering and informatics.
+              Sekolah Arsitektur, Perencanaan, dan Pengembangan Kebijakan (SAPPK) ITB didirikan pada 29 Agustus 2005 berdasarkan SK Rektor ITB No. 222/2005 sebagai bagian dari reorganisasi unit akademik di ITB yang meningkatkan jumlah Fakultas/Sekolah dari 7 menjadi 11. Meskipun merupakan fakultas baru, SAPPK dibentuk dari penggabungan program akademik dan sumber daya yang sebelumnya berada di bawah Fakultas Teknik Sipil dan Perencanaan, yaitu Departemen Arsitektur dan Perencanaan Wilayah dan Kota, serta dua program studi dari Fakultas Teknik Industri, yaitu Studi Pembangunan dan Transportasi. Kini, SAPPK menaungi dua program studi untuk Sarjana, yakni Arsitektur (AR) dan Perencanaan Wilayah dan Kota (PWK).
+              
+              SAPPK memiliki program studi yang fokus pada pengembangan pengetahuan dan keterampilan dalam bidang perencanaan, desain, dan kebijakan yang terkait dengan lingkungan binaan. Mahasiswa di SAPPK mempelajari mata kuliah seperti Desain Arsitektur, Perencanaan Tata Ruang, Pengembangan Wilayah, dan Kebijakan Transportasi. Keterampilan yang ditekankan meliputi kemampuan analisis spasial, desain dan visualisasi, perencanaan strategis, serta pemahaman regulasi dan kebijakan publik. Selain itu, mahasiswa juga dilatih untuk berpikir kritis dan kreatif dalam menghadapi tantangan urbanisasi, pembangunan berkelanjutan, dan transportasi. Kemampuan komunikasi dan kolaborasi multidisiplin juga menjadi bagian penting dari kurikulum untuk memastikan lulusan SAPPK siap berkontribusi dalam menciptakan lingkungan yang lebih baik.
               </div>
-              <div className="fakultas-foto-and-get-to-know">
+              <div className="fakultas-foto-dan-get-to-know">
               <div className="fakultas-get-to-know">
-                Get to know about STEI!
+                Get to know about SAPPK!
               </div>
               <div className="fakultas-foto">
-                <Image src="/Labtek.png" alt="Labtek" width={600} height={400}></Image>
+                <Image src="/SAPPK.png" alt="Labtek" width={600} height={400}></Image>
               </div>
-              </div>
+            </div>
           </div> 
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_GajiLamaKerja.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
+            <Image src="/GrafikSF1.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
           </div>
 
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_GajiTepatSetelahLulus.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
+            <Image src="/GrafikSF2.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
           </div>
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_JenisKerja.png" alt="Labtek" width={1000} height={1000}/>
+            <Image src="/GrafikSF3.png" alt="Labtek" width={1000} height={1000}/>
           </div>
 
           <div className="footer">

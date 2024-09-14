@@ -48,36 +48,36 @@ export default function Home() {
             </div>
           </div>
           <div className="fakultas-nama">
-            Sekolah Teknik Elektro dan Informatika (STEI)
+            Fakultas Teknologi Industri (FTI)
           </div>
 
           <div className="fakultas-article">
               <div className="fakultas-long-desc">
-                STEI ITB is at the forefront of technological education in Indonesia. Our programs in electrical engineering and informatics blend cutting-edge theory with practical applications. 
-                We prepare students to become innovators and leaders in the rapidly evolving fields of technology and computer science. With world-class faculty and state-of-the-art facilities, STEI ITB offers an unparalleled educational experience for aspiring engineers and technologists. 
-                At STEI ITB, we offer a comprehensive learning environment that goes beyond traditional classroom education. Our students engage in hands-on projects, collaborative research, and industry partnerships that provide real-world experience. We emphasize innovation, critical thinking, and problem-solving skills to prepare our graduates for the challenges of the digital age. With a strong focus on both theoretical knowledge and practical skills, STEI ITB graduates are well-equipped to drive technological advancements and shape the future of Indonesia's tech industry. Join us to be part of a community dedicated to excellence in electrical engineering and informatics.
+              Fakultas Teknologi Industri (FTI) ITB diresmikan pada tahun 1973. Hingga Desember 2005, FTI menaungi berbagai prodi-prodi teknik seperti Teknik Elektro, Teknik Mesin, Teknik Penerbangan, dan Teknik Industri sebelum dipecah dan dibentuk fakultas-fakultas baru. Saat ini, terdapat 6 program studi Sarjana yang berada di bawah FTI, yakni Teknik Kimia (TK), Teknik Fisika (TF), Teknik Industri (TI), Manajemen Rekayasa (MR), Teknik Bioenergi dan Kemurgi (TB), dan Teknik Pangan (TP).
+              
+              Mahasiswa yang ingin bersaing di FTI harus memiliki dasar yang kuat dalam ilmu seperti Matematika, Fisika, dan Kimia. Memiliki keterampilan analisis dan pemecahan masalah. Setiap program studi memiliki fokus yang berbeda. Teknik Kimia berfokus pada proses produksi dan pengolahan bahan kimia. Teknik Fisika pada penerapan prinsip fisika dalam teknologi. Teknik Industri pada optimalisasi sistem produksi dan manajemen. Manajemen Rekayasa pada integrasi antara manajemen dan teknik. Teknik Bioenergi dan Kemurgi pada pemanfaatan sumber daya hayati untuk energi dan bahan. Teknik Pangan pada teknologi pengolahan dan keamanan pangan. Mata kuliah yang dipelajari mencakup Termodinamika, Rekayasa Proses, Sistem Kendali, Riset Operasi, hingga Teknologi Pangan dan Energi Terbarukan. Mahasiswa FTI juga dilatih untuk menguasai teknologi terkini dan bekerja dalam tim multidisiplin untuk memecahkan masalah kompleks dalam industri.
               </div>
-              <div className="fakultas-foto-and-get-to-know">
+              <div className="fakultas-foto-dan-get-to-know">
               <div className="fakultas-get-to-know">
-                Get to know about STEI!
+                Get to know about FTI!
               </div>
               <div className="fakultas-foto">
-                <Image src="/Labtek.png" alt="Labtek" width={600} height={400}></Image>
+                <Image src="/FTI.png" alt="Labtek" width={600} height={400}></Image>
               </div>
-              </div>
+            </div>
           </div> 
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_GajiLamaKerja.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
+            <Image src="/GrafikSF1.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
           </div>
 
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_GajiTepatSetelahLulus.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
+            <Image src="/GrafikSF2.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
           </div>
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_JenisKerja.png" alt="Labtek" width={1000} height={1000}/>
+            <Image src="/GrafikSF3.png" alt="Labtek" width={1000} height={1000}/>
           </div>
 
           <div className="footer">

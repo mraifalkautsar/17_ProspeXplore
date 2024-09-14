@@ -48,36 +48,34 @@ export default function Home() {
             </div>
           </div>
           <div className="fakultas-nama">
-            Sekolah Teknik Elektro dan Informatika (STEI)
+            Sekolah Farmasi (SF)
           </div>
 
           <div className="fakultas-article">
               <div className="fakultas-long-desc">
-                STEI ITB is at the forefront of technological education in Indonesia. Our programs in electrical engineering and informatics blend cutting-edge theory with practical applications. 
-                We prepare students to become innovators and leaders in the rapidly evolving fields of technology and computer science. With world-class faculty and state-of-the-art facilities, STEI ITB offers an unparalleled educational experience for aspiring engineers and technologists. 
-                At STEI ITB, we offer a comprehensive learning environment that goes beyond traditional classroom education. Our students engage in hands-on projects, collaborative research, and industry partnerships that provide real-world experience. We emphasize innovation, critical thinking, and problem-solving skills to prepare our graduates for the challenges of the digital age. With a strong focus on both theoretical knowledge and practical skills, STEI ITB graduates are well-equipped to drive technological advancements and shape the future of Indonesia's tech industry. Join us to be part of a community dedicated to excellence in electrical engineering and informatics.
+              Sekolah Farmasi (SF) ITB didirikan sebagai Departemen Farmasi pada 6 Oktober 1947 di bawah Faculteit voor Wiskunde en Natuurwetenschapen, bagian dari Universitas Indonesia. Pada 1 Februari 1949, fakultas tersebut berganti nama menjadi Fakultas Ilmu Pengetahuan dan Ilmu Alam (FIPIA). Pada tahun 1959, fakultas ini menjadi bagian dari ITB, dan Departemen Farmasi bergabung dengan Departemen Kimia dan Biologi hingga tahun 1961. Pada tahun 1973, Departemen Farmasi bergabung dengan Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA). Seiring berjalannya waktu, kurikulum dan struktur organisasi terus berkembang. Pada tahun 2005, Departemen Farmasi resmi berubah status menjadi Sekolah Farmasi (SF) yang menyediakan program Sains dan Teknologi Farmasi (FA) serta Farmasi Klinik dan Komunitas (FKK). Mahasiswa SF harus memiliki dasar yang kuat dalam Kimia, Biologi, dan Matematika, karena ketiga bidang ini merupakan fondasi dalam memahami ilmu farmasi. Mata kuliah yang diajarkan mencakup Farmakologi, Kimia Farmasi, Formulasi, Farmasi Klinik, dan Biologi Farmasi, dengan kombinasi teori, praktik laboratorium, dan penelitian. Keterampilan yang harus dikuasai meliputi analisis laboratorium, penguasaan teknologi farmasi modern, pemahaman regulasi obat dan keamanan pangan, serta kemampuan komunikasi yang baik.
               </div>
-              <div className="fakultas-foto-and-get-to-know">
+              <div className="fakultas-foto-dan-get-to-know">
               <div className="fakultas-get-to-know">
-                Get to know about STEI!
+                Get to know about SF!
               </div>
               <div className="fakultas-foto">
-                <Image src="/Labtek.png" alt="Labtek" width={600} height={400}></Image>
+                <Image src="/SF.jpg" alt="Labtek" width={600} height={400}></Image>
               </div>
-              </div>
+            </div>
           </div> 
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_GajiLamaKerja.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
+            <Image src="/GrafikSF1.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
           </div>
 
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_GajiTepatSetelahLulus.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
+            <Image src="/GrafikSF2.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
           </div>
 
           <div className="fakultas-graph"> 
-            <Image src="/STEI_JenisKerja.png" alt="Labtek" width={1000} height={1000}/>
+            <Image src="/GrafikSF3.png" alt="Labtek" width={1000} height={1000}/>
           </div>
 
           <div className="footer">

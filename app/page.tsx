@@ -24,7 +24,7 @@ const slideData = [
   { title: "Fakultas Teknik Sipil dan Lingkungan (FTSL)", description: "FTSL trains engineers in civil and environmental engineering, focusing on sustainable infrastructure development and environmental protection, crucial for urban planning and construction." },
   { title: "Sekolah Arsitektur, Perencanaan dan Pengembangan Kebijakan (SAPPK)", description: "SAPPK offers an interdisciplinary approach to architecture, planning, and policy development, preparing students to create sustainable and innovative built environments." },
   { title: "Sekolah Bisnis dan Manajemen (SBM)", description: "SBM provides a world-class business education, focusing on leadership, entrepreneurship, and innovation, essential for success in the global business landscape." },
-  { title: "Sekolah Farmasi (SF)", description: "SF offers a rigorous curriculum in pharmaceutical sciences, preparing graduates for careers in healthcare, research, and the pharmaceutical industry, contributing to public health and well-being." },  
+  { title: "Sekolah Farmasi (SF)", description: "SF offers a rigorous curriculum in pharmaceutical sciences, preparing graduates for careers in healthcare, research, and the pharmaceutical industry, contributing to public health and well-being." },
 ];
 
 export default function Home() {
@@ -32,17 +32,36 @@ export default function Home() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const { data: session } = useSession();
+  const router = useRouter();
+
   const handleSignOut = async () => {
     await signOut();
     router.push("/");
   };
-  
-  const router = useRouter();
+
+  const facultyRoutes = {
+    "Sekolah Teknik Elektro Informatika (STEI)": "/fakultas/stei",
+    "Fakultas Teknik Industri (FTI)": "/fakultas/fti",
+    "Fakultas Teknik Mesin dan Dirgantara (FTMD)": "/fakultas/ftmd",
+    "Sekolah Ilmu Teknologi Hayati (SITH)": "/fakultas/sith",
+    "Fakultas Ilmu dan Teknologi Kebumian (FITB)": "/fakultas/fitb",
+    "Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)": "/fakultas/fmipa",
+    "Fakultas Seni Rupa dan Desain (FSRD)": "/fakultas/fsrd",
+    "Fakultas Teknik Pertambangan dan Perminyakan (FTTM)": "/fakultas/fttm",
+    "Fakultas Teknik Sipil dan Lingkungan (FTSL)": "/fakultas/ftsl",
+    "Sekolah Arsitektur, Perencanaan dan Pengembangan Kebijakan (SAPPK)": "/fakultas/sappk",
+    "Sekolah Bisnis dan Manajemen (SBM)": "/fakultas/sbm",
+    "Sekolah Farmasi (SF)": "/fakultas/sf",
+  };
+
   const handleRedirect = (title: string) => {
-      if (title === "Sekolah Teknik Elektro Informatika (STEI)"){
-        router.push("/fakultas/stei");
-      }
-    };
+    const route = facultyRoutes[title];
+    if (route) {
+      router.push(route);
+    } else {
+      console.error("Route not found for title:", title);
+    }
+  };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggleDropdown = () => {

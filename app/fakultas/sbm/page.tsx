@@ -68,17 +68,22 @@ export default function Home() {
           </div> 
 
           <div className="fakultas-graph"> 
-            <Image src="/GrafikSF1.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
+            <Image src="/GrafikSBM1.png" alt="Grafik gaji berdasarkan lama kerja" width={1000} height={1000} />
           </div>
 
 
           <div className="fakultas-graph"> 
-            <Image src="/GrafikSF2.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
+            <Image src="/GrafikSBM2.png" alt="Gaji tepat setelah lulus" width={1000} height={1000} />
           </div>
 
           <div className="fakultas-graph"> 
-            <Image src="/GrafikSF3.png" alt="Labtek" width={1000} height={1000}/>
+            <Image src="/GrafikSBM3.png" alt="Labtek" width={1000} height={1000}/>
           </div>
+
+          <div className="fakultas-graph"> 
+            <Image src="/GrafikSBM4.png" alt="Grafik naik turun" width={1000} height={1000}/>
+          </div>
+
 
           <div className="footer">
             <div className="footer-logo">
